@@ -2,6 +2,11 @@
   background-color: #282c34;
 }
 
+a {
+  color: #999;
+  text-decoration: none;
+}
+
 .App-header {
   text-align: center;
   min-height: 100vh;
@@ -10,17 +15,70 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1.5rem 0;
+  display: table;
+  float: right;
+  z-index: 1000;
+}
+
+.navigation>ul {
+  margin: 0 1.5rem 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation>ul>li {
+  color: #999;
+  position: relative;
+  display: inline-block;
+  margin: 0 1.5rem;
+  font-size: calc(10px + 2vmin);
+  text-shadow: black 0px 0px 5px;
+}
+
+.navigation>ul>li:before {
+  transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition-property: width, opacity;
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(20px + 2vmin);
+  width: 0;
+  right: 0;
+  height: 1px;
+  background: #fff;
+}
+
+.navigation>ul>li:hover:before {
+  width: 100%;
+}
+
+.navigation>ul>li>a.selected {
+  color: #fff;
+}
+
+/* ********************** */
+
+.vertical-timeline-element-icon {
+  transition: transform 0.5s;
+}
+
+.vertical-timeline-element-icon:hover {
+  transform: scale(1.2);
 }
 
 .vertical-timeline-element-icon> img {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+
 }
 
 @keyframes App-logo-spin {

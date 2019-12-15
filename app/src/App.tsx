@@ -1,38 +1,56 @@
 import React from 'react';
 import './App.css';
-import { Art } from './Art';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import { Catalog } from './Catalog';
+import { Painters } from './Painting/Painters';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
+import { Home } from './Home/Home';
+import { Photographers } from './Photographers/Photographers';
+import { FilmMakers } from './FilmMakers/FilmMakers';
 
 const App: React.FC = () => {
-  Art.artists.sort((x, y) => (x.workPeriod.end.getTime() - x.workPeriod.start.getTime()) - (y.workPeriod.end.getTime() - y.workPeriod.start.getTime()))
+  Catalog.painters.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Timeline about artists that I care about.
-        </p>
-      </header>
-      <VerticalTimeline>
-        {Art.artists.map(x => {
-          return (<VerticalTimelineElement
-            key={x.artist}
-            className="vertical-timeline-element"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date={x.workPeriod.start.getFullYear() + " - " + x.workPeriod.end.getFullYear()}
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<img src={x.img}></img>}
-          >
-            <h3 className="vertical-timeline-element-title">{x.artist}</h3>
-            <p>
-              {x.description}
-            </p>
-          </VerticalTimelineElement>)
-        })}
+      <Router>
 
-      </VerticalTimeline>
+        <nav className="navigation">
+          <ul>
+            <li>
+              <NavLink exact activeClassName="selected" to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" to="/painters">Painters</NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" to="/photographers">Photographers</NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="selected" to="/filmmakers">FilmMakers</NavLink>
+            </li>
+          </ul>
+        </nav>
 
+        <Switch>
+          <Route path="/painters">
+            <Painters></Painters>
+          </Route>
+          <Route path="/photographers">
+            <Photographers></Photographers>
+          </Route>
+          <Route path="/filmmakers">
+            <FilmMakers></FilmMakers>
+          </Route>
+          <Route path="/">
+            <Home></Home>
+          </Route>
+        </Switch>
+
+      </Router>
     </div>
   );
 }

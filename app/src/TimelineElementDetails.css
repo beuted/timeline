@@ -1,0 +1,52 @@
+.vertical-timeline-element-details {
+  position: relative;
+  transition: height .5s;
+  height: 0;
+  margin-bottom: 50px;
+  margin-top: -50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.vertical-timeline-element-details.show {
+  height: 60vh;
+}
+
+.vertical-timeline-element-details-element {
+  height: 60vh;
+  display: inline-block;
+}
+
+.vertical-timeline-element-details-element-img {
+  height: 60vh;
+}
+
+.vertical-timeline-element-details-element-placeholder {
+  height: 60vh;
+  width: 400px;
+  background-color: rgb(40, 44, 52);
+  border: 1px solid white;
+}
+
+.vertical-timeline-element-details-element-desc {
+  position: absolute;
+
+  margin-left: 15px;
+  margin-top: 15px;
+
+  color: white;
+  text-shadow: black 0px 0px 5px;
+  font-weight: 500;
+}
+
+.vertical-timeline-element-details-element-desc-desc {
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.vertical-timeline-element-details-element:hover .vertical-timeline-element-details-element-desc-desc {
+  margin-top: 15px;
+  opacity: 1;
+}

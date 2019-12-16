@@ -3,7 +3,7 @@ import './App.css';
 import { Catalog } from './Catalog';
 import { Painters } from './Painting/Painters';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
   NavLink
@@ -16,7 +16,7 @@ const App: React.FC = () => {
   Catalog.painters.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter basename="/timeline">
 
         <nav className="navigation">
           <ul>
@@ -50,7 +50,7 @@ const App: React.FC = () => {
           </Route>
         </Switch>
 
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

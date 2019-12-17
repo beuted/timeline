@@ -3,7 +3,7 @@
 }
 
 a {
-  color: #999;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -39,29 +39,29 @@ a {
   position: relative;
   display: inline-block;
   margin: 0 1.5rem;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   text-shadow: black 0px 0px 5px;
-}
 
-.navigation>ul>li:before {
-  transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-  transition-property: width, opacity;
-  content: '';
-  display: block;
-  position: absolute;
-  top: calc(20px + 2vmin);
-  width: 0;
-  right: 0;
-  height: 1px;
-  background: #fff;
-}
+  &::before {
+    transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition-property: width, opacity;
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(20px + 2vmin);
+    width: 0;
+    right: 0;
+    height: 1px;
+    background: #fff;
+  }
 
-.navigation>ul>li:hover:before {
-  width: 100%;
-}
+  &:hover::before {
+    width: 100%;
+  }
 
-.navigation>ul>li>a.selected {
-  color: #fff;
+  &.selected::before {
+    width: 100%;
+  }
 }
 
 /* ********************** */

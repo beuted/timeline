@@ -1,6 +1,6 @@
 import React from 'react';
-import { Artist } from './Catalog';
-import './TimelineElementDetails.css';
+import { Artist } from '../Catalog';
+import './TimelineElementDetails.scss';
 
 export const TimelineElementDetails: React.FC<{artist: Artist, show: boolean}> = (props) => {
   // Déclare une nouvelle variable d'état, qu’on va appeler « count »

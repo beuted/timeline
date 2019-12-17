@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { Catalog } from './Catalog';
 import { Painters } from './Painting/Painters';
 import {
   BrowserRouter,
   Switch,
   Route,
-  NavLink
-} from "react-router-dom";
+  Link
+} from 'react-router-dom';
 import { Home } from './Home/Home';
 import { Photographers } from './Photographers/Photographers';
 import { FilmMakers } from './FilmMakers/FilmMakers';
@@ -20,18 +20,10 @@ const App: React.FC = () => {
 
         <nav className="navigation">
           <ul>
-            <li>
-              <NavLink exact activeClassName="selected" to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName="selected" to="/painters">Painters</NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName="selected" to="/photographers">Photographers</NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName="selected" to="/filmmakers">FilmMakers</NavLink>
-            </li>
+              <NavItem exact to="/">Home</NavItem>
+              <NavItem exact to="/painters">Painters</NavItem>
+              <NavItem exact to="/photographers">Photographers</NavItem>
+              <NavItem exact to="/filmmakers">FilmMakers</NavItem>
           </ul>
         </nav>
 
@@ -53,6 +45,16 @@ const App: React.FC = () => {
       </BrowserRouter>
     </div>
   );
+}
+
+function NavItem({children, to, exact}: {children: any, to: string, exact: boolean}) {
+  return (
+      <Route path={to} exact={exact} children={({match}) => (
+          <li className={match ? "selected" : undefined}>
+              <Link to={to}>{children}</Link>
+          </li>
+      )}/>
+  )
 }
 
 export default App;

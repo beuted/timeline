@@ -240,7 +240,7 @@ export class Catalog {
                 },
                 {
                     name: "Auto portrait",
-                    img: "../painters/gogh/self-portrait.jpg.jpg",
+                    img: "../painters/gogh/self-portrait.jpg",
                     date: "1889"
                 },
                 {
@@ -346,16 +346,6 @@ export class Catalog {
                     date: "1504"
                 },
             ]
-        },
-        {
-            artist: "Odilon Redon",
-            lifePeriod: {
-                start: new Date(1840, 0, 0),
-                end: new Date(1916, 0, 0)
-            },
-            img: "../painters/Odilon_Redon.jpg",
-            description: "Peintre et graveur symboliste de la fin du XIXe siècle. Son art explore les aspects de la pensée, l'aspect sombre et ésotérique de l'âme humaine, empreinte des mécanismes du rêve.",
-            works: []
         },
         {
             artist: "Gustav Klimt",
@@ -723,7 +713,7 @@ export class Catalog {
                     img: "../photographers/becher/Bernd-Hilla-Becher-01.jpg",
                 },
                 {
-                    name: "Photographie 8",
+                    name: "Photographie 9",
                     img: "../photographers/becher/Bernd-Hilla-Becher-02.jpg",
                 },
             ]

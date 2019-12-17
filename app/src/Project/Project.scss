@@ -1,0 +1,35 @@
+.project {
+    width: 30vw;
+    height: 30vw;
+    margin: 20px;
+    background-color: pink;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    filter: grayscale(1);
+    transition: filter .5s ease-in-out;
+    cursor: pointer;
+}
+
+.project:hover .project-title, .project:hover .project-date {
+    opacity: 1;
+}
+
+.project:hover {
+    filter: grayscale(0.25)
+}
+
+.project-title, .project-date {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    font-size: 2vw;
+    color: #fff;
+    text-shadow: black 0px 0px 5px;
+}

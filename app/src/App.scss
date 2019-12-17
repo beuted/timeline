@@ -1,9 +1,16 @@
-.App {
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
   background-color: #282c34;
 }
 
 a {
-  color: #fff;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -14,11 +21,12 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vw);
   color: #fff;
 }
 
 .navigation {
+  mix-blend-mode: difference;
   position: fixed;
   top: 0;
   right: 0;
@@ -35,12 +43,12 @@ a {
 }
 
 .navigation>ul>li {
-  color: #999;
+  color: #fff;
   position: relative;
   display: inline-block;
   margin: 0 1.5rem;
-  font-size: calc(5px + 2vmin);
-  text-shadow: black 0px 0px 5px;
+  font-size: calc(10px + 0.7vw);
+  //text-shadow: black 0px 0px 5px;
 
   &::before {
     transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
@@ -48,7 +56,7 @@ a {
     content: '';
     display: block;
     position: absolute;
-    top: calc(20px + 2vmin);
+    top: calc(15px + 0.7vw);
     width: 0;
     right: 0;
     height: 1px;
@@ -62,6 +70,17 @@ a {
   &.selected::before {
     width: 100%;
   }
+}
+
+// https://github.com/maisano/react-router-transition
+.switch-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
 }
 
 /* ********************** */

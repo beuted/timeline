@@ -22,27 +22,27 @@ export class Catalog {
                 start: new Date(1881, 0, 0),
                 end: new Date(1973, 0, 0)
             },
-            img: "../painters/Pablo_picasso.jpg",
+            img: "./painters/Pablo_picasso.jpg",
             description: "Developpe le cubisme en 1907 avec les peintres Georges Braque et dans une certaine mesure Auguste Herbin. The Blue Period (1901–1904), the Rose Period (1904–1906), the African-influenced Period (1907–1909), Analytic Cubism (1909–1912), and Synthetic Cubism (1912–1919)",
             works: [
                 {
                     name: "Guernica",
-                    img: "../painters/picasso/guernica.jpg",
+                    img: "./painters/picasso/guernica.jpg",
                     date: "1937"
                 },
                 {
                     name: "Les Demoiselles d'Avignon",
-                    img: "../painters/picasso/122634980_o.jpg",
+                    img: "./painters/picasso/122634980_o.jpg",
                     date: "1907"
                 },
                 {
                     name: "La Femme qui pleure",
-                    img: "../painters/picasso/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg",
+                    img: "./painters/picasso/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg",
                     date: "1937"
                 },
                 {
                     name: "Don Quixote",
-                    img: "../painters/picasso/lithographie-don-quixote-par-pablo-picasso-1955-6.jpg",
+                    img: "./painters/picasso/lithographie-don-quixote-par-pablo-picasso-1955-6.jpg",
                     date: "1955"
                 },
             ]

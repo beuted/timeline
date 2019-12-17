@@ -1,0 +1,42 @@
+.home {
+    background-image: url("/../bg.gif")
+}
+
+.name {
+    font-size: calc(10px + 3vw);
+}
+
+.presentation {
+    position: relative;
+    background-image: none;
+    background-color: #f7f7f7;
+    height: 1000px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.presentation-text {
+    display: inline-block;
+    width: 100%;
+    color: #f0f0f5;
+    font-size: 23vw;
+    margin-top:200px;
+    user-select: none;
+}
+
+.presentation-text span {
+    position: absolute;
+    width: 200vw;
+    animation: rightToLeft 50s linear infinite 0s;
+    animation-delay: -25s;
+}
+
+.presentation-text span:nth-child(2) {
+    transform: translateX(200vw);
+    animation-delay: 0s;
+}
+
+@keyframes rightToLeft{
+	0% { transform: translateX(200vw); }
+	100% { transform: translateX(-200vw);  }
+}

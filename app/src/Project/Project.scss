@@ -10,12 +10,21 @@
 }
 
 .project-description {
-    font-size: 2em;
+    flex: 50%;
+    font-size: 1.8vw;
     color: #fff;
+    text-align: left;
+}
+
+.project-description>div {
+    margin-top: 0.4vw;
+}
+
+.project-image-container {
+    flex: 50%;
 }
 
 .project-image {
-    flex-shrink: 0;
     width: 30vw;
     height: 30vw;
     margin: 20px;

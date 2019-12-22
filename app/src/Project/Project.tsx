@@ -15,15 +15,17 @@ export const Project: React.FC<{project: Project }> = ({ project }) => {
   return (
   <div className="project">
     <Fade bottom>
-      <a className="project-image" style={{ backgroundImage: 'url(\'/projects/' + project.image + '\')'}} href={project.github || project.demo}>
-        <div className="project-title">{project.title}</div>
-        <div className="project-date">{project.date}</div>
-      </a>
+      <div className='project-image-container'>
+        <a className="project-image" style={{ backgroundImage: 'url(\'/projects/' + project.image + '\')'}} href={project.github || project.demo}>
+          <div className="project-title">{project.title}</div>
+          <div className="project-date">{project.date}</div>
+        </a>
+      </div>
     </Fade>
     <div className="project-description">
-    {project.description ? project.description.map((line, i) => {
-      return (<Fade bottom delay={i*300}>{line}</Fade>);
-    }): null}
+      {project.description ? project.description.map((line, i) => {
+        return (<Fade key={i} bottom delay={i*300}>{line}</Fade>);
+      }): null}
     </div>
   </div>);
 }

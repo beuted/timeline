@@ -8,12 +8,6 @@ export const Home: React.FC = () => {
       <header className="App-header name">
         Benoît Jehanno
       </header>
-      <div className="presentation">
-        <div className="presentation-text">
-          <span>This is what I do</span>
-          <span>This is what I enjoy</span>
-        </div>
-      </div>
     </div>
   );
 }

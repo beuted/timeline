@@ -1,4 +1,21 @@
+
 .project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.project-description {
+    font-size: 2em;
+    color: #fff;
+}
+
+.project-image {
+    flex-shrink: 0;
     width: 30vw;
     height: 30vw;
     margin: 20px;
@@ -18,11 +35,11 @@
     cursor: pointer;
 }
 
-.project:hover .project-title, .project:hover .project-date {
+.project-image:hover .project-title, .project-image:hover .project-date {
     opacity: 1;
 }
 
-.project:hover {
+.project-image:hover {
     filter: grayscale(0.25)
 }
 

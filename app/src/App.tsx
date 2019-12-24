@@ -15,7 +15,7 @@ import { Creations } from './Creations/Creations';
 import useMultiKeyPress from './useMultiKeyPress';
 
 const App: React.FC = () => {
-  const scrollContainerRef = React.createRef<HTMLDivElement>(); //TODO
+  const scrollContainerRef = React.useRef<HTMLDivElement>(); //TODO
 
   return (
     <div className="App">

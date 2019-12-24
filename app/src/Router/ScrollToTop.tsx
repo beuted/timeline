@@ -20,7 +20,7 @@ export default function ScrollToTop(props: Props) {
     return () => {
       unlisten();
     }
-  }, []);
+  }, [history, scrollContainerRef]);
 
   return <Fragment>{children}</Fragment>;
 }

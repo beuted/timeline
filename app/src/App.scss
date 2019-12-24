@@ -25,15 +25,20 @@ a {
   color: #fff;
 }
 
-.navigation {
-  mix-blend-mode: difference;
-  position: fixed;
+.navigation-wrapper {
   top: 0;
   right: 0;
-  margin: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  background-image: url("/../bg.gif");
+  z-index: 1000;
+}
+
+.navigation {
+  right: 0;
+  padding: 0.5rem 0;
   display: table;
   float: right;
-  z-index: 1000;
 }
 
 .navigation>ul {
@@ -43,20 +48,20 @@ a {
 }
 
 .navigation>ul>li {
+  //mix-blend-mode: difference;
   color: #fff;
   position: relative;
   display: inline-block;
   margin: 0 1.5rem;
-  font-size: calc(10px + 0.7vw);
-  //text-shadow: black 0px 0px 5px;
+  font-size: calc(10px + 0.3vw);
 
   &::before {
-    transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-    transition-property: width, opacity;
+    transition: width .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition-property: width;
     content: '';
     display: block;
     position: absolute;
-    top: calc(15px + 0.7vw);
+    top: calc(12px + 0.2vw);
     width: 0;
     right: 0;
     height: 1px;
@@ -75,12 +80,15 @@ a {
 // https://github.com/maisano/react-router-transition
 .switch-wrapper {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .switch-wrapper > div {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* ********************** */

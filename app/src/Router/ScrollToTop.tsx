@@ -1,10 +1,13 @@
 import React, { useEffect, Fragment } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
-function ScrollToTop({ history, children }: any) {
+const ScrollToTop: React.FC<RouteComponentProps & {scrollContainerRef: React.RefObject<HTMLDivElement>}> = ({ history, children, scrollContainerRef }) => {
   useEffect(() => {
     const unlisten = history.listen(() => {
-      window.scrollTo(0, 0);
+      // TODO: Use React Ref for this (I tried but didn't manage)
+      //var switchWrapper = document.querySelector('.switch-wrapper');
+      if (scrollContainerRef.current)
+        scrollContainerRef.current.scrollTop = 0;
     });
     return () => {
       unlisten();

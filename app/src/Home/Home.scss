@@ -5,3 +5,11 @@
 .name {
     font-size: calc(10px + 3vw);
 }
+
+.particle-background {
+    position: absolute;
+    overflow: hidden;
+    word-wrap: break-word;
+    width: 100%;
+    height: 100%;
+}

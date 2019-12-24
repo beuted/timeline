@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import './App.scss';
-import { Catalog } from './Catalog';
 import { Painters } from './Painting/Painters';
 import {
   HashRouter,
-  Switch,
   Route,
   Link
 } from 'react-router-dom';
@@ -14,32 +12,37 @@ import { FilmMakers } from './FilmMakers/FilmMakers';
 import { AnimatedSwitch } from 'react-router-transition';
 import ScrollToTop from './Router/ScrollToTop';
 import { Creations } from './Creations/Creations';
+import useMultiKeyPress from './useMultiKeyPress';
 
 const App: React.FC = () => {
-  Catalog.painters.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
+  const scrollContainerRef = React.createRef<HTMLDivElement>(); //TODO
+
   return (
     <div className="App">
       <HashRouter>
-
-        <nav className="navigation">
-          <ul>
+        <div className="navigation-wrapper">
+          <nav className="navigation">
+            <ul>
               <NavItem exact to="/">Home</NavItem>
               <NavItem exact to="/creations">Creations</NavItem>
               <NavItem exact to="/painters">Painters</NavItem>
               <NavItem exact to="/photographers">Photographers</NavItem>
               <NavItem exact to="/filmmakers">FilmMakers</NavItem>
-          </ul>
-        </nav>
-        <ScrollToTop>
-          <AnimatedSwitch
-            atEnter={{ translateX: 100 }}
-            atLeave={{ translateX: -100 }}
-            atActive={{ translateX: 0}}
-            mapStyles={(styles: any) => ({
-              transform: `translateX(${styles.translateX}%)`,
-            })}
-            className="switch-wrapper"
-          >
+            </ul>
+          </nav>
+        </div>
+
+        <AnimatedSwitch
+          atEnter={{ translateX: 100 }}
+          atLeave={{ translateX: -100 }}
+          atActive={{ translateX: 0}}
+          mapStyles={(styles: any) => ({
+            transform: `translateX(${styles.translateX}%)`,
+          })}
+          className="switch-wrapper"
+          ref={scrollContainerRef}
+        >
+          <ScrollToTop scrollContainerRef={scrollContainerRef}>
             <Route path="/creations">
               <Creations></Creations>
             </Route>
@@ -55,8 +58,8 @@ const App: React.FC = () => {
             <Route path="/">
               <Home></Home>
             </Route>
-          </AnimatedSwitch>
-        </ScrollToTop>
+          </ScrollToTop>
+        </AnimatedSwitch>
 
       </HashRouter>
     </div>

@@ -1,7 +1,13 @@
 import React, { useEffect, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const ScrollToTop: React.FC<{scrollContainerRef: React.RefObject<HTMLDivElement|undefined>}> = ({ children, scrollContainerRef }) => {
+type Props = {
+  scrollContainerRef: React.RefObject<HTMLDivElement|undefined>;
+  children: React.ReactNode
+}
+
+export default function ScrollToTop(props: Props) {
+  const {scrollContainerRef, children} = props;
   const history = useHistory();
 
   useEffect(() => {
@@ -18,5 +24,3 @@ const ScrollToTop: React.FC<{scrollContainerRef: React.RefObject<HTMLDivElement|
 
   return <Fragment>{children}</Fragment>;
 }
-
-export default ScrollToTop;

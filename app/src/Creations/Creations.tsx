@@ -3,7 +3,9 @@ import 'react-vertical-timeline-component/style.min.css';
 import './Creations.scss';
 import { Project } from '../Project/Project';
 
-export const Creations: React.FC = () => {
+type Props = {}
+
+export default function Creations(props: Props) {
   const projects: Project[] = [
     {
        title: 'JS RPG',

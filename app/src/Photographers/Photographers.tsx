@@ -3,8 +3,9 @@ import { Catalog } from '../Catalog';
 import 'react-vertical-timeline-component/style.min.css';
 import { TimeLine } from '../Timeline/TimeLine';
 
+type Props = {}
 
-export const Photographers: React.FC = () => {
+export default function Photographers(props: Props) {
   // Sort by birth
   Catalog.photographers.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
   return (

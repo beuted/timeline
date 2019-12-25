@@ -1,7 +1,15 @@
 import React, { useEffect, Fragment } from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const ScrollToTop: React.FC<RouteComponentProps & {scrollContainerRef: React.RefObject<HTMLDivElement>}> = ({ history, children, scrollContainerRef }) => {
+type Props = {
+  scrollContainerRef: React.RefObject<HTMLDivElement|undefined>;
+  children: React.ReactNode
+}
+
+export default function ScrollToTop(props: Props) {
+  const {scrollContainerRef, children} = props;
+  const history = useHistory();
+
   useEffect(() => {
     const unlisten = history.listen(() => {
       // TODO: Use React Ref for this (I tried but didn't manage)
@@ -12,9 +20,7 @@ const ScrollToTop: React.FC<RouteComponentProps & {scrollContainerRef: React.Ref
     return () => {
       unlisten();
     }
-  }, []);
+  }, [history, scrollContainerRef]);
 
   return <Fragment>{children}</Fragment>;
 }
-
-export default withRouter(ScrollToTop);

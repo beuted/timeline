@@ -51,14 +51,14 @@ export default function Creations(props: Props) {
        github: 'https://github.com/beuted/smoothycon',
        demo: 'https://smoothycon.herokuapp.com/demo.html',
        image: 'smoothycon.PNG',
-       date: 'March 2015',
+       date: '2015',
        description: ['My first try at CSS animations', 'An animated icon library']
     },
     {
        title: 'ng-chocolat',
        github: 'https://github.com/beuted/ng-chocolat',
        image: 'ng-chocolat.PNG',
-       date: 'September 2015',
+       date: '2015',
        description: ['Port of @nicolas-t "Chocolat" to angularjs', '(a lightbox library)']
     },
     {
@@ -126,6 +126,13 @@ export default function Creations(props: Props) {
       image: 'appart-aggregator.png',
       date: '2019',
       description: ['Aggregate and store appartments', 'from SeLoger, Pap and others', 'Allows you to write your own filters,', 'save the one you want and add comments']
+   },
+   {
+      title: 'benoit.jehanno.net (v2)',
+      github: 'https://github.com/beuted/timelines',
+      image: 'bjehannonet2.PNG',
+      date: '2019',
+      description: ['My website', 're-done in react', 'using hooks and typescript']
    },
   ];
 

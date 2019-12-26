@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import './App.scss';
 import {
   HashRouter,
@@ -8,13 +8,18 @@ import {
 import { Home } from './Home/Home';
 import { AnimatedSwitch } from 'react-router-transition';
 import ScrollToTop from './Router/ScrollToTop';
-import Creations from './Creations/Creations';
-import Photographers from './Photographers/Photographers';
-import Painters from './Painting/Painters';
-import FilmMakers from './FilmMakers/FilmMakers';
 import { useKeyPress } from './useKeyPress';
 import { useScrollPosition } from './useScrollPosition';
 import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
+
+const loadCreations = () => import('./Creations/Creations');
+const loadPainters = () => import('./Painting/Painters');
+const loadPhotographers = () => import('./Photographers/Photographers');
+const loadFilmMakers = () => import('./FilmMakers/FilmMakers');
+const Creations = React.lazy(loadCreations);
+const Painters = React.lazy(loadPainters);
+const Photographers = React.lazy(loadPhotographers);
+const FilmMakers = React.lazy(loadFilmMakers);
 
 const App: React.FC = () => {
 
@@ -22,6 +27,14 @@ const App: React.FC = () => {
   const [scrollRatio, setScrollRatio] = useState(0);
   const [hideOnScroll, setHideOnScroll] = useState(false);
   const [prevPosition, setPrevPosition] = useState<{x: number, y: number}>({ x: 0, y: 0 })
+
+  useEffect(() => {
+    // preload other pages
+    loadCreations();
+    loadPainters();
+    loadPhotographers();
+    loadFilmMakers();
+  }, [])
 
   const keyAltPressed = useKeyPress('alt');
   const keyOPressed = useKeyPress('o');
@@ -75,18 +88,10 @@ const App: React.FC = () => {
             })}
             className="switch-wrapper"
           >
-            <Route path="/creations">
-              <Creations></Creations>
-            </Route>
-            <Route path="/painters">
-              <Painters></Painters>
-            </Route>
-            <Route path="/photographers">
-              <Photographers></Photographers>
-            </Route>
-            <Route path="/filmmakers">
-              <FilmMakers></FilmMakers>
-            </Route>
+            <Route path="/creations" component={waitLoaded(Creations)} />
+            <Route path="/painters" component={waitLoaded(Painters)} />
+            <Route path="/photographers" component={waitLoaded(Photographers)}/>
+            <Route path="/filmmakers" component={waitLoaded(FilmMakers)}/>
             <Route path="/">
               <Home></Home>
             </Route>
@@ -106,6 +111,15 @@ function NavItem({children, to, exact}: {children: any, to: string, exact: boole
           </li>
       )}/>
   )
+}
+
+export function waitLoaded<TProps>(WrappedComponent: React.ComponentType<TProps>): React.ComponentType<TProps> {
+  console.log('waitloaded')
+  return (props: TProps) => (
+    <Suspense fallback={<span>Loading...</span>}>
+      <WrappedComponent {...props} />
+    </Suspense>
+  );
 }
 
 export default App;

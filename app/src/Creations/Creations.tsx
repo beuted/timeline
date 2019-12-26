@@ -1,6 +1,6 @@
 import './Creations.scss';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'react-vertical-timeline-component/style.min.css';
 import { Project } from '../Project/Project';
 import Fade from 'react-reveal/Fade';
@@ -135,6 +135,10 @@ export default function Creations(props: Props) {
       description: ['My website', 're-done in react', 'using hooks and typescript']
    },
   ];
+
+  useEffect(() => {
+   console.log("creations");
+  }, [])
 
   return (
     <div className="creations">

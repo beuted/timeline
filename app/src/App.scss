@@ -1,8 +1,4 @@
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -26,17 +22,22 @@ a {
 }
 
 .navigation-wrapper {
-  top: 0;
+  top: -0;
   right: 0;
   position: fixed;
   width: 100%;
   background-image: url("/../bg.gif");
   z-index: 1000;
+  transition: top .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.navigation-wrapper.hidden {
+  top: -80px;
 }
 
 .navigation {
   right: 0;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   display: table;
   float: right;
 }
@@ -53,19 +54,19 @@ a {
   position: relative;
   display: inline-block;
   margin: 0 1.5rem;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(10px + 0.7vw);
 
   &::before {
-    transition: width .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
     transition-property: width;
     content: '';
     display: block;
     position: absolute;
-    top: calc(12px + 0.2vw);
+    top: calc(12px + 0.7vw);
     width: 0;
     right: 0;
     height: 1px;
     background: #fff;
+    transition: width .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
   }
 
   &:hover::before {
@@ -83,6 +84,16 @@ a {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
+  transition: height .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  // Hide scrollbar
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  &::-webkit-scrollbar {
+    width: 0;  /* Safari and Chrome */
+    height: 0;
+  }
 }
 
 .switch-wrapper > div {
@@ -91,7 +102,7 @@ a {
   height: 100vh;
 }
 
-/* ********************** */
+/* ************* vertical timeline css modifs ********* */
 
 .vertical-timeline-element-icon {
   transition: transform 0.5s;
@@ -105,14 +116,18 @@ a {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ***************** */
+
+.scroll-indicator-wrapper {
+  position: fixed;
+  right: 50px;
+  top: 30%;
+  z-index: 100;
+  transition: right .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.scroll-indicator-wrapper.hidden {
+  right: -10px;
 }

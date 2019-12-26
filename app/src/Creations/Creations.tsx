@@ -1,7 +1,9 @@
+import './Creations.scss';
+
 import React from 'react';
 import 'react-vertical-timeline-component/style.min.css';
-import './Creations.scss';
 import { Project } from '../Project/Project';
+import Fade from 'react-reveal/Fade';
 
 type Props = {}
 
@@ -123,7 +125,7 @@ export default function Creations(props: Props) {
       github: 'https://github.com/beuted/AppartAggregator',
       image: 'appart-aggregator.png',
       date: '2019',
-      description: ['Aggregate and store appartments from SeLoger, Pap and others', 'Allows you to write your own filters,', 'save the one you want and add comments']
+      description: ['Aggregate and store appartments', 'from SeLoger, Pap and others', 'Allows you to write your own filters,', 'save the one you want and add comments']
    },
   ];
 
@@ -132,7 +134,7 @@ export default function Creations(props: Props) {
       <div>
         <header className="App-header">
           <div className="presentation">
-            <div className="presentation-title">Creations</div>
+            <div className="presentation-title"><Fade bottom cascade>Creations</Fade></div>
             <div className="presentation-text">
               <span>This is what I do</span>
               <span>This is what I do</span>

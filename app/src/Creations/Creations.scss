@@ -23,11 +23,12 @@
     position: absolute;
     width: 100%;
     font-size: 10vw;
+    overflow: hidden;
 }
 
 .presentation-text {
     display: block;
-    color: rgba($color: #131416, $alpha: 0.5);
+    color: rgba($color: #131416, $alpha: 0.7);
     font-size: 30vw;
     user-select: none;
 }

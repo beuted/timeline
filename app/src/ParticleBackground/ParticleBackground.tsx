@@ -6,6 +6,20 @@ export const ParticleBackground: React.FC<{canvasWidth: number, canvasHeight: nu
   let definedFps = fps !== undefined ? fps : 60;
 
   useEffect(() => {
+    function createParticle(){
+      var particle: any = {};
+      particle.x =  Math.round( Math.random() * canvasWidth);
+      particle.y =  Math.round( Math.random() * canvasHeight);
+      particle.rgba = "#fff";
+      particle.vx = Math.round( Math.random() * 2) - 0.5;
+      particle.vy = Math.round( Math.random() * 2) - 0.5;
+      return particle;
+    }
+
+    function findDistance(p1: {x: number, y: number}, p2: {x: number, y: number}){
+      return Math.sqrt( Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2) );
+    }
+
     var particles: any[] = [],
      patriclesNum = 20,
       minDistance = 300;
@@ -71,7 +85,7 @@ export const ParticleBackground: React.FC<{canvasWidth: number, canvasHeight: nu
       }
     };
     render();
-  });
+  }, [canvasHeight, canvasWidth, definedFps]);
 
   return (
     <canvas
@@ -81,17 +95,4 @@ export const ParticleBackground: React.FC<{canvasWidth: number, canvasHeight: nu
     ></canvas>
   );
 
-  function createParticle(){
-    var particle: any = {};
-    particle.x =  Math.round( Math.random() * canvasWidth);
-    particle.y =  Math.round( Math.random() * canvasHeight);
-    particle.rgba = "#fff";
-    particle.vx = Math.round( Math.random() * 2) - 0.5;
-    particle.vy = Math.round( Math.random() * 2) - 0.5;
-    return particle;
-  }
-
-  function findDistance(p1: {x: number, y: number}, p2: {x: number, y: number}){
-    return Math.sqrt( Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2) );
-  }
 }

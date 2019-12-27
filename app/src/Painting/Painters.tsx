@@ -11,7 +11,7 @@ export default function Painters(props: Props) {
 
   return (
     <div>
-      <header className="App-header">
+      <header className="app-header">
         <p>
           Timeline about painters that I care about.
         </p>

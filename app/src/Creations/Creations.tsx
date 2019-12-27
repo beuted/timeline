@@ -143,7 +143,7 @@ export default function Creations(props: Props) {
   return (
     <div className="creations">
       <div>
-        <header className="App-header">
+        <header className="app-header">
           <div className="presentation">
             <div className="presentation-title"><Fade bottom cascade>Creations</Fade></div>
             <div className="presentation-text">

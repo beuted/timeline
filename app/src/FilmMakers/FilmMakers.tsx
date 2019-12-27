@@ -10,7 +10,7 @@ export default function FilmMakers(props: Props) {
   Catalog.filmmakers.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
   return (
     <div>
-      <header className="App-header">
+      <header className="app-header">
         <p>
           Timeline about film makers that I care about.
         </p>

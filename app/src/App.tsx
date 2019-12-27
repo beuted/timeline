@@ -16,10 +16,10 @@ const loadCreations = () => import('./Creations/Creations');
 const loadPainters = () => import('./Painting/Painters');
 const loadPhotographers = () => import('./Photographers/Photographers');
 const loadFilmMakers = () => import('./FilmMakers/FilmMakers');
-const Creations = React.lazy(loadCreations);
-const Painters = React.lazy(loadPainters);
-const Photographers = React.lazy(loadPhotographers);
-const FilmMakers = React.lazy(loadFilmMakers);
+const Creations = waitLoaded(React.lazy(loadCreations));
+const Painters = waitLoaded(React.lazy(loadPainters));
+const Photographers = waitLoaded(React.lazy(loadPhotographers));
+const FilmMakers = waitLoaded(React.lazy(loadFilmMakers));
 
 const App: React.FC = () => {
 
@@ -88,10 +88,10 @@ const App: React.FC = () => {
             })}
             className="switch-wrapper"
           >
-            <Route path="/creations" component={waitLoaded(Creations)} />
-            <Route path="/painters" component={waitLoaded(Painters)} />
-            <Route path="/photographers" component={waitLoaded(Photographers)}/>
-            <Route path="/filmmakers" component={waitLoaded(FilmMakers)}/>
+            <Route path="/creations" component={Creations} />
+            <Route path="/painters" component={Painters} />
+            <Route path="/photographers" component={Photographers}/>
+            <Route path="/filmmakers" component={FilmMakers}/>
             <Route path="/">
               <Home></Home>
             </Route>
@@ -114,7 +114,6 @@ function NavItem({children, to, exact}: {children: any, to: string, exact: boole
 }
 
 export function waitLoaded<TProps>(WrappedComponent: React.ComponentType<TProps>): React.ComponentType<TProps> {
-  console.log('waitloaded')
   return (props: TProps) => (
     <Suspense fallback={<span>Loading...</span>}>
       <WrappedComponent {...props} />

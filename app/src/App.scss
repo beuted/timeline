@@ -1,3 +1,5 @@
+@import './mixins';
+
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
@@ -10,7 +12,7 @@ a {
   text-decoration: none;
 }
 
-.App-header {
+.app-header {
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -49,6 +51,7 @@ a {
 }
 
 .navigation>ul>li {
+  @include smooth-underline(calc(12px + 0.7vw));
   //mix-blend-mode: difference;
   color: #fff;
   position: relative;

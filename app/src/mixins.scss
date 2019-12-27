@@ -1,0 +1,23 @@
+@mixin smooth-underline($distance) {
+  position: relative;
+  &::before {
+    transition-property: width;
+    content: '';
+    display: block;
+    position: absolute;
+    top: $distance;
+    width: 0;
+    right: 0;
+    height: 1px;
+    background: #fff;
+    transition: width .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &.selected::before {
+    width: 100%;
+  }
+}

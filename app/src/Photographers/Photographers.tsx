@@ -10,7 +10,7 @@ export default function Photographers(props: Props) {
   Catalog.photographers.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
   return (
     <div>
-      <header className="App-header">
+      <header className="app-header">
         <p>
           Timeline about photographers that I care about.
         </p>

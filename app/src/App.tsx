@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import './App.scss';
 import {
-  HashRouter,
   Route,
-  Link
+  Link,
+  BrowserRouter
 } from 'react-router-dom';
 import { Home } from './Home/Home';
 import { AnimatedSwitch } from 'react-router-transition';
@@ -60,7 +60,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <div className={'navigation-wrapper ' + (hideOnScroll ? 'hidden' : '')}>
           <nav className="navigation">
             <ul>
@@ -98,7 +98,7 @@ const App: React.FC = () => {
           </AnimatedSwitch>
         </ScrollToTop>
 
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

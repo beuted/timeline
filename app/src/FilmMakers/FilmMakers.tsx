@@ -7,7 +7,7 @@ type Props = {}
 
 export default function FilmMakers(props: Props) {
   // Sort by birth
-  Catalog.filmmakers.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
+  Catalog.filmmakers.sort((x, y) => x.lifePeriod.start - y.lifePeriod.start)
   return (
     <div>
       <header className="app-header">

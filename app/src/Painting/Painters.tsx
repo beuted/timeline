@@ -7,7 +7,7 @@ type Props = {}
 
 export default function Painters(props: Props) {
   // Sort by birth
-  Catalog.painters.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
+  Catalog.painters.sort((x, y) => x.lifePeriod.start - y.lifePeriod.start)
 
   return (
     <div>

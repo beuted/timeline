@@ -41,7 +41,7 @@ export const TimeLine: React.FC<{artists: Artist[]}> = ({ artists }) => {
               className="vertical-timeline-element"
               contentStyle={{ background: '#6eaab8', color: '#fff', boxShadow: 'none', marginBottom: '50px' }}
               contentArrowStyle={{ borderRight: '7px solid  #6eaab8' }}
-              date={x.lifePeriod.start.getFullYear() + " - " + (x.lifePeriod.end ? x.lifePeriod.end.getFullYear() : "today")}
+              date={x.lifePeriod.start + " - " + (x.lifePeriod.end ? x.lifePeriod.end : "today")}
               icon={<img alt={x.artist} src={x.img}></img>}
               iconStyle={{cursor: 'pointer'}}
               iconOnClick={() => clickArtist(x.artist, refToFocus)}

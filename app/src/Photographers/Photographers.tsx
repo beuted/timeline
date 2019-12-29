@@ -7,7 +7,7 @@ type Props = {}
 
 export default function Photographers(props: Props) {
   // Sort by birth
-  Catalog.photographers.sort((x, y) => x.lifePeriod.start.getTime() - y.lifePeriod.start.getTime())
+  Catalog.photographers.sort((x, y) => x.lifePeriod.start - y.lifePeriod.start)
   return (
     <div>
       <header className="app-header">

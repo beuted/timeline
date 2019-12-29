@@ -1,17 +1,19 @@
+export interface Work {
+    name: string,
+    img: string | null,
+    date?: string | null
+    description?: string
+}
+
 export interface Artist {
     artist: string,
     lifePeriod: {
-        start: Date,
-        end?: Date | null
+        start: number,
+        end?: number | null
     },
     img: string,
     description: string,
-    works: {
-        name: string,
-        img: string | null,
-        date?: string | null
-        description?: string
-    }[]
+    works: Work[]
 }
 
 export class Catalog {
@@ -19,8 +21,8 @@ export class Catalog {
         {
             artist: "Pablo Picasso",
             lifePeriod: {
-                start: new Date(1881, 0, 0),
-                end: new Date(1973, 0, 0)
+                start: 1881,
+                end: 1973
             },
             img: "./painters/Pablo_picasso.jpg",
             description: "Developpe le cubisme en 1907 avec les peintres Georges Braque et dans une certaine mesure Auguste Herbin. The Blue Period (1901–1904), the Rose Period (1904–1906), the African-influenced Period (1907–1909), Analytic Cubism (1909–1912), and Synthetic Cubism (1912–1919)",
@@ -50,8 +52,8 @@ export class Catalog {
         {
             artist: "Salvador Dali",
             lifePeriod: {
-                start: new Date(1904, 0, 0),
-                end: new Date(1989, 0, 0)
+                start: 1904,
+                end: 1989
             },
             img: "../painters/Salvador_Dali.jpg",
             description: "L'un des principaux représentants du surréalisme",
@@ -83,8 +85,8 @@ export class Catalog {
         {
             artist: "Francis Bacon",
             lifePeriod: {
-                start: new Date(1909, 0, 0),
-                end: new Date(1992, 0, 0)
+                start: 1909,
+                end: 1992
             },
             img: "../painters/Francis_Bacon_by_John_Dekin.jpg",
             description: "Peintre britanique. Réputé pour ses triptyques. Peintre de la violence, de la cruauté et de la tragédie, son esprit est hanté, selon ses dires, par le vers d'Eschyle « l'odeur du sang humain ne me quitte pas des yeux »",
@@ -115,8 +117,8 @@ export class Catalog {
         {
             artist: "Edouard Manet",
             lifePeriod: {
-                start: new Date(1832, 0, 0),
-                end: new Date(1883, 0, 0)
+                start: 1832,
+                end: 1883
             },
             img: "../painters/Edouard_Manet.jpg",
             description: "Peintre et graveur français. Précurseur de la peinture moderne, impressionisme et réalisme",
@@ -142,8 +144,8 @@ export class Catalog {
         {
             artist: "Claude Monet",
             lifePeriod: {
-                start: new Date(1840, 0, 0),
-                end: new Date(1926, 0, 0)
+                start: 1840,
+                end: 1926
             },
             img: "../painters/Claude_Monet.jpg",
             description: "Peintre francais. Un des fondateurs de l'impressionnisme.",
@@ -168,8 +170,8 @@ export class Catalog {
         {
             artist: "Vassily Kandinsky",
             lifePeriod: {
-                start: new Date(1866, 0, 0),
-                end: new Date(1944, 0, 0)
+                start: 1866,
+                end: 1944
             },
             img: "../painters/Vassily-Kandinsky.jpeg",
             description: "Peintre, graveur, théoricien de l’art, poète et dramaturge russe. Un des fondateurs de l'art abstrait",
@@ -194,8 +196,8 @@ export class Catalog {
         {
             artist: "Paul Klee",
             lifePeriod: {
-                start: new Date(1879, 0, 0),
-                end: new Date(1940, 0, 0)
+                start: 1879,
+                end: 1940
             },
             img: "../painters/Paul_Klee_1911.jpg",
             description: "Peintre Alemand d'identité culturelle suisse. Faisant partie du mouvement expressionniste et surréaliste",
@@ -227,8 +229,8 @@ export class Catalog {
         {
             artist: "Vincent Van Gogh",
             lifePeriod: {
-                start: new Date(1853, 0, 0),
-                end: new Date(1890, 0, 0)
+                start: 1853,
+                end: 1890
             },
             img: "../painters/Vincent_van_Gogh.jpg",
             description: "Peintre et dessinateur néerlandais. Son œuvre pleine de naturalisme, inspirée par l'impressionnisme et le pointillisme, annonce le fauvisme et l'expressionnisme.",
@@ -264,8 +266,8 @@ export class Catalog {
         {
             artist: "Edvard Munch",
             lifePeriod: {
-                start: new Date(1863, 0, 0),
-                end: new Date(1944, 0, 0)
+                start: 1863,
+                end: 1944
             },
             img: "../painters/Edvard_Munch_1933.jpg",
             description: "Peintre et graveur expressionniste norvégien.",
@@ -278,8 +280,8 @@ export class Catalog {
         {
             artist: "Léonard de Vinci",
             lifePeriod: {
-                start: new Date(1452, 0, 0),
-                end: new Date(1519, 0, 0)
+                start: 1452,
+                end: 1519
             },
             img: "../painters/Leonardo_self.jpg",
             description: "Peintre italien et un homme d'esprit universel, à la fois artiste, organisateur de spectacles et de fêtes, scientifique, ingénieur, inventeur, anatomiste, peintre, sculpteur, architecte, urbaniste, botaniste, musicien, poète, philosophe et écrivain.",
@@ -319,8 +321,8 @@ export class Catalog {
         {
             artist: "Michel-Ange",
             lifePeriod: {
-                start: new Date(1475, 0, 0),
-                end: new Date(1564, 0, 0)
+                start: 1475,
+                end: 1564
             },
             img: "../painters/Miguel_Angel.jpg",
             description: "Sculpteur, peintre, architecte, poète et urbaniste florentin de la Haute Renaissance.",
@@ -350,8 +352,8 @@ export class Catalog {
         {
             artist: "Gustav Klimt",
             lifePeriod: {
-                start: new Date(1862, 0, 0),
-                end: new Date(1918, 0, 0)
+                start: 1862,
+                end: 1918
             },
             img: "../painters/Klimt.jpg",
             description: "Peintre symboliste autrichien. Un des membres les plus en vue du mouvement Art nouveau et de la Sécession de Vienne",
@@ -371,8 +373,8 @@ export class Catalog {
         {
             artist: "Auguste Renoir",
             lifePeriod: {
-                start: new Date(1841, 0, 0),
-                end: new Date(1919, 0, 0)
+                start: 1841,
+                end: 1919
             },
             img: "../painters/Pierre-Auguste_Renoir.jpg",
             description: "Peintre Francais figuratif. Membre à part entière du groupe impressionniste",
@@ -392,8 +394,8 @@ export class Catalog {
         {
             artist: "Auguste Rodin",
             lifePeriod: {
-                start: new Date(1840, 0, 0),
-                end: new Date(1917, 0, 0)
+                start: 1840,
+                end: 1917
             },
             img: "../painters/Auguste_Rodin.jpg",
             description: "L'un des plus importants sculpteurs français de la seconde moitié du XIXᵉ siècle, considéré comme un des pères de la sculpture moderne.Héritier des siècles de l'humanisme, l'art réaliste de Rodin est un aboutissement, croisement de romantisme et d'impressionnisme dont la sculpture est modelée par la lutte entre la forme et la lumière.",
@@ -408,8 +410,8 @@ export class Catalog {
         {
             artist: "Sandro Botticelli",
             lifePeriod: {
-                start: new Date(1445, 0, 0),
-                end: new Date(1510, 0, 0)
+                start: 1445,
+                end: 1510
             },
             img: "../painters/Sandro_Botticelli_083.jpg",
             description: "Peintre italien. Un des peintre les plus importants de la Renaissance italienne et de l'histoire de l'art.",
@@ -427,8 +429,8 @@ export class Catalog {
         {
             artist: "Johannes Vermeer",
             lifePeriod: {
-                start: new Date(1632, 0, 0),
-                end: new Date(1675, 0, 0)
+                start: 1632,
+                end: 1675
             },
             img: "../painters/Jan_Vermeer_van_Delft_002.jpg",
             description: "Peintre baroque néerlandais.",
@@ -448,8 +450,8 @@ export class Catalog {
         {
             artist: "Paul Cézanne",
             lifePeriod: {
-                start: new Date(1839, 0, 0),
-                end: new Date(1906, 0, 0)
+                start: 1839,
+                end: 1906
             },
             img: "../painters/Cezanne.jpg",
             description: "Considéré comme le « père de l'art moderne »",
@@ -464,8 +466,8 @@ export class Catalog {
         {
             artist: "Paul Gauguin",
             lifePeriod: {
-                start: new Date(1848, 0, 0),
-                end: new Date(1903, 0, 0)
+                start: 1848,
+                end: 1903
             },
             img: "../painters/Paul_Gauguin.jpg",
             description: "Un des plus importants précurseurs de l'art moderne avec Klimt, Cézanne, Munch, Seurat et van Gogh",
@@ -480,8 +482,8 @@ export class Catalog {
         {
             artist: "Frida Kahlo",
             lifePeriod: {
-                start: new Date(1907, 0, 0),
-                end: new Date(1954, 0, 0)
+                start: 1907,
+                end: 1954
             },
             img: "../painters/Frida_Kahlo.jpg",
             description: "Mexicaine, mondialement connu pour ses peintures murales.",
@@ -501,8 +503,8 @@ export class Catalog {
         {
             artist: "Banksy",
             lifePeriod: {
-                start: new Date(1974, 0, 0),
-                end: new Date(0, 0, 0)
+                start: 1974,
+                end: 0
             },
             img: "../painters/banksy.jpg",
             description: "",
@@ -511,8 +513,8 @@ export class Catalog {
         {
             artist: "Fernando Botero",
             lifePeriod: {
-                start: new Date(1932, 0, 0),
-                end: new Date(0, 0, 0)
+                start: 1932,
+                end: 0
             },
             img: "../painters/Fernando_Botero.jpg",
             description: "Réputé pour ses personnages aux formes rondes et voluptueuses inspirés de l'art précolombien.",
@@ -531,8 +533,8 @@ export class Catalog {
         {
             artist: "Georges Seurat",
             lifePeriod: {
-                start: new Date(1859, 0, 0),
-                end: new Date(1891, 0, 0)
+                start: 1859,
+                end: 1891
             },
             img: "../painters/Georges_Seurat_1888.jpg",
             description: "Inventeur de la technique dite divisionniste.  Considéré avec Cézanne, Gauguin et Van Gogh, comme un des quatre grands peintres du post-impressionnisme.",
@@ -552,8 +554,8 @@ export class Catalog {
         {
             artist: "Juan Gris",
             lifePeriod: {
-                start: new Date(1887, 0, 0),
-                end: new Date(1927, 0, 0)
+                start: 1887,
+                end: 1927
             },
             img: "../painters/Juan_Gris.jpg",
             description: "Peintre espagnol proche du cubisme",
@@ -578,8 +580,8 @@ export class Catalog {
         {
             artist: "Andy Warhol",
             lifePeriod: {
-                start: new Date(1928, 0, 0),
-                end: new Date(1987, 0, 0)
+                start: 1928,
+                end: 1987
             },
             img: "../painters/Andy_Warhol.jpg",
             description: "Un des principaux représentants du pop art",
@@ -599,8 +601,8 @@ export class Catalog {
         {
             artist: "Le Douanier Rousseau",
             lifePeriod: {
-                start: new Date(1844, 0, 0),
-                end: new Date(1910, 0, 0)
+                start: 1844,
+                end: 1910
             },
             img: "../painters/Douanier_Rousseau_Dornac.jpg",
             description: "Un représentant majeur de l'art naïf",
@@ -626,8 +628,8 @@ export class Catalog {
         {
             artist: "Joan Miró",
             lifePeriod: {
-                start: new Date(1893, 0, 0),
-                end: new Date(1983, 0, 0)
+                start: 1893,
+                end: 1983
             },
             img: "../painters/Joan_Miro.jpg",
             description: "L'un des principaux représentants du mouvement surréaliste",
@@ -662,8 +664,8 @@ export class Catalog {
         {
             artist: "Jean-Michel Basquiat",
             lifePeriod: {
-                start: new Date(1960, 0, 0),
-                end: new Date(1988, 0, 0)
+                start: 1960,
+                end: 1988
             },
             img: "../painters/basquiat.jpg",
             description: "",
@@ -702,8 +704,8 @@ export class Catalog {
         {
             artist: "Les frère becher",
             lifePeriod: {
-                start: new Date(1931, 0, 0),
-                end: new Date(2007, 0, 0)
+                start: 1931,
+                end: 2007
             },
             img: "../photographers/becher.jpg",
             description: "Le travail photographique du couple Becher porte sur des bâtiments industriels (les « typologies ») photographiés selon un protocole extrêmement rigoureux (vue frontale, centrage du sujet, etc.).",
@@ -724,7 +726,7 @@ export class Catalog {
         {
             artist: "Tarantino",
             lifePeriod: {
-                start: new Date(1963, 0, 0),
+                start: 1963,
                 end: null
             },
             img: "../filmmakers/tarantino.jpg",
@@ -732,27 +734,27 @@ export class Catalog {
             works: [
                 {
                     name: "Reservoir Dogs",
-                    img: null,
+                    img: "../filmmakers/tarantino/reservoir-dogs.jpeg",
                     date: "1992"
                 },
                 {
                     name: "Pulp Fiction",
-                    img: null,
+                    img: "../filmmakers/tarantino/pulp-fiction.jpg",
                     date: "1994"
                 },
                 {
                     name: "Kill Bill Vol 1 & 2",
-                    img: null,
+                    img: "../filmmakers/tarantino/kill-bill.jpeg",
                     date: "2003"
                 },
                 {
                     name: "Inglourious Basterds",
-                    img: null,
+                    img: "../filmmakers/tarantino/Inglorious-Basterds.jpg",
                     date: "2009"
                 },
                 {
                     name: "Once Upon a Time in Hollywood",
-                    img: null,
+                    img: "../filmmakers/tarantino/once-apon-a-time-in-hollywood.jpg",
                     date: "2019"
                 },
             ]
@@ -760,7 +762,7 @@ export class Catalog {
         {
             artist: "Steven Spielberg",
             lifePeriod: {
-                start: new Date(1946, 0, 0),
+                start: 1946,
                 end: null
             },
             img: "../filmmakers/steven-spielberg.jpg",
@@ -768,32 +770,32 @@ export class Catalog {
             works: [
                 {
                     name: "E.T",
-                    img: null,
+                    img: "../filmmakers/steven-spielberg/et-extra-terrestrial.jpg",
                     date: "1982"
                 },
                 {
                     name: "Jurassic Park",
-                    img: null,
+                    img: "../filmmakers/steven-spielberg/jurassic-park.jpg",
                     date: "1993"
                 },
                 {
-                    name: "Il faut sauve rle soldat Ryan",
-                    img: null,
+                    name: "Saving Private Ryan",
+                    img: "../filmmakers/steven-spielberg/saving-private-ryan.jpg",
                     date: "1998"
                 },
                 {
-                    name: "Les aventuriers de l'arche perdu",
-                    img: null,
+                    name: "Raiders of the Lost Ark",
+                    img: "../filmmakers/steven-spielberg/raiders-of-the-lost-ark.jpg",
                     date: "1981"
                 },
                 {
                     name: "Minority Report",
-                    img: null,
+                    img: "../filmmakers/steven-spielberg/minority-report.jpg",
                     date: "2002"
                 },
                 {
                     name: "Catch Me If You Can",
-                    img: null,
+                    img: "../filmmakers/steven-spielberg/catch-me-if-you-can.jpg",
                     date: "2002"
                 },
             ]
@@ -801,7 +803,7 @@ export class Catalog {
         {
             artist: "Martin Scorsese",
             lifePeriod: {
-                start: new Date(1942, 0, 0),
+                start: 1942,
                 end: null
             },
             img: "../filmmakers/Martin_Scorsese.jpg",
@@ -809,63 +811,58 @@ export class Catalog {
             works: [
                 {
                     name: "Taxi Driver",
-                    img: null,
+                    img: "../filmmakers/martin-scorsese/taxi-driver.jpg",
                     date: "1976"
                 },
                 {
-                    name: "Les Affranchis ",
-                    img: null,
+                    name: "Les Affranchis",
+                    img: "../filmmakers/martin-scorsese/les-affranchis.png",
                     date: "1990"
                 },
                 {
                     name: "Le Loup de Wall Street",
-                    img: null,
+                    img: "../filmmakers/martin-scorsese/wolf-of-wall-street.jpg",
                     date: "2013"
                 },
                 {
                     name: "Shutter Island",
-                    img: null,
+                    img: "../filmmakers/martin-scorsese/shutter-island.png",
                     date: "2010"
                 },
                 {
-                    name: "Les Infiltrés ",
-                    img: null,
+                    name: "Les Infiltrés",
+                    img: "../filmmakers/martin-scorsese/les-infiltrés.png",
                     date: "2006"
-                },
-                {
-                    name: "Gangs of New York",
-                    img: null,
-                    date: "2002"
                 },
             ]
         },
         {
             artist: "Alfred Hitchcock",
             lifePeriod: {
-                start: new Date(1899 , 0, 0),
-                end: new Date(1980 , 0, 0),
+                start: 1899,
+                end: 1980,
             },
             img: "../filmmakers/hitchcock.jpg",
             description: "",
             works: [
                 {
                     name: "Vertigo",
-                    img: null,
+                    img: "../filmmakers/alfred-hitchcock/vertigo.png",
                     date: "1958"
                 },
                 {
-                    name: "La Mort aux trousses",
-                    img: null,
+                    name: "North by North-West (La Mort aux trousses)",
+                    img: "../filmmakers/alfred-hitchcock/north-by-northwest.png",
                     date: "1959"
                 },
                 {
                     name: "Psychose",
-                    img: null,
+                    img: "../filmmakers/alfred-hitchcock/psychose.jpg",
                     date: "1960"
                 },
                 {
-                    name: "Les oiseaux",
-                    img: null,
+                    name: "birds",
+                    img: "../filmmakers/alfred-hitchcock/birds.jpg",
                     date: "1963"
                 },
             ]
@@ -873,15 +870,15 @@ export class Catalog {
         {
             artist: "Orson Welles",
             lifePeriod: {
-                start: new Date(1915, 0, 0),
-                end: new Date(1985, 0, 0)
+                start: 1915,
+                end: 1985
             },
             img: "../filmmakers/Orson_Welles_1937.jpg",
             description: "Citizen Kane",
             works: [
                 {
                     name: "Citizen Kane",
-                    img: null,
+                    img: "../filmmakers/orson-welles/citizen-kane.jpg",
                     date: "1941"
                 },
             ]
@@ -889,35 +886,35 @@ export class Catalog {
         {
             artist: "Stanley Kubrick",
             lifePeriod: {
-                start: new Date(1928, 0, 0),
-                end: new Date(1999, 0, 0)
+                start: 1928,
+                end: 1999
             },
             img: "../filmmakers/Kubrick.jpg",
             description: "",
             works: [
                 {
                     name: "Docteur Folamour",
-                    img: null,
+                    img: "../filmmakers/stanley-kubrick/docteur-folamour.jpg",
                     date: "1964"
                 },
                 {
                     name: "2001 Space odyssey",
-                    img: null,
+                    img: "../filmmakers/stanley-kubrick/2001.jpg",
                     date: "1968"
                 },
                 {
                     name: "Orange mécanique",
-                    img: null,
+                    img: "../filmmakers/stanley-kubrick/orange-mecanique.jpg",
                     date: "1971"
                 },
                 {
                     name: "Shining",
-                    img: null,
+                    img: "../filmmakers/stanley-kubrick/shining.jpg",
                     date: "1980"
                 },
                 {
                     name: "Full Metal Jacket",
-                    img: null,
+                    img: "../filmmakers/stanley-kubrick/full-metal-jacket.jpg",
                     date: "1987"
                 },
             ]
@@ -925,7 +922,7 @@ export class Catalog {
         {
             artist: "Francis Ford Coppola",
             lifePeriod: {
-                start: new Date(1939, 0, 0),
+                start: 1939,
                 end: null
             },
             img: "../filmmakers/Francis_Ford_Coppola_2011_CC.jpg",
@@ -933,7 +930,7 @@ export class Catalog {
             works: [
                 {
                     name: "Apocalypse Now",
-                    img: null,
+                    img: "../filmmakers/francis-ford-coppola/apocalypse-now.jpg",
                     date: "1979"
                 },
             ]
@@ -941,25 +938,25 @@ export class Catalog {
         {
             artist: "Sergio Leone",
             lifePeriod: {
-                start: new Date(1929, 0, 0),
-                end: new Date(1989, 0, 0)
+                start: 1929,
+                end: 1989
             },
             img: "../filmmakers/1419367.jpg",
             description: "",
             works: [
                 {
                     name: "Et pour quelques dollars de plus",
-                    img: null,
+                    img: "../filmmakers/sergio-leone/et-pr-qlq-dollars-de-plus.jpg",
                     date: "1965"
                 },
                 {
                     name: "Le Bon, la Brute et le Truand",
-                    img: null,
+                    img: "../filmmakers/sergio-leone/le-bon-la-brute-et-le-truand.jpg",
                     date: "1966"
                 },
                 {
                     name: "Mon nom est Personne",
-                    img: null,
+                    img: "../filmmakers/sergio-leone/mon-nom-est-personne.jpg",
                     date: "1973"
                 },
             ]
@@ -967,7 +964,7 @@ export class Catalog {
         {
             artist: "Woody Allen",
             lifePeriod: {
-                start: new Date(1935 , 0, 0),
+                start: 1935,
                 end: null
             },
             img: "../filmmakers/woody.jpg",
@@ -975,22 +972,22 @@ export class Catalog {
             works: [
                 {
                     name: "Escrocs mais pas trop",
-                    img: null,
+                    img: "../filmmakers/woody-allen/escrocs_mais_pas_trop.jpg",
                     date: "2000"
                 },
                 {
                     name: "Match Point",
-                    img: null,
+                    img: "../filmmakers/woody-allen/match_point.png",
                     date: "2005"
                 },
                 {
                     name: "Vicky Cristina Barcelona",
-                    img: null,
+                    img: "../filmmakers/woody-allen/vicky-cristina-barcelona.jpg",
                     date: "2008"
                 },
                 {
                     name: "Whatever Works",
-                    img: null,
+                    img: "../filmmakers/woody-allen/whatever-works.jpg",
                     date: "2009"
                 },
 
@@ -999,7 +996,7 @@ export class Catalog {
         {
             artist: "Christopher Nolan",
             lifePeriod: {
-                start: new Date(1970, 0, 0),
+                start: 1970,
                 end: null
             },
             img: "../filmmakers/Christopher_Nolan_Cannes_2018.jpg",
@@ -1007,27 +1004,27 @@ export class Catalog {
             works: [
                 {
                     name: "Memento",
-                    img: null,
+                    img: "../filmmakers/nolan/memento.jpg",
                     date: "2000"
                 },
                 {
                     name: "Batman Begins",
-                    img: null,
+                    img: "../filmmakers/nolan/batman-begin.jpg",
                     date: "2005"
                 },
                 {
                     name: "Le Prestige",
-                    img: null,
+                    img: "../filmmakers/nolan/le-prestige.jpg",
                     date: "2006"
                 },
                 {
                     name: "Inception",
-                    img: null,
+                    img: "../filmmakers/nolan/inception.jpg",
                     date: "2010"
                 },
                 {
                     name: "Interstellar",
-                    img: null,
+                    img: "../filmmakers/nolan/interstellar.jpg",
                     date: "2014"
                 },
             ]
@@ -1035,18 +1032,28 @@ export class Catalog {
         {
             artist: "Charles Chaplin",
             lifePeriod: {
-                start: new Date(1889, 0, 0),
-                end: new Date(1977, 0, 0),
+                start: 1889,
+                end: 1977,
             },
             img: "../filmmakers/Charlie_Chaplin.jpg",
             description: "",
             works: [
+                {
+                    name: "Le kid",
+                    img: "../filmmakers/charlie-chaplin/le-kid.jpg",
+                    date: "1921"
+                },
+                {
+                    name: "Les temps modernes",
+                    img: "../filmmakers/charlie-chaplin/temps-modernes.jpg",
+                    date: "1936"
+                },
             ]
         },
         {
-            artist: "Les freres cohen",
+            artist: "Les freres coen",
             lifePeriod: {
-                start: new Date(1954, 0, 0),
+                start: 1954,
                 end: null
             },
             img: "../filmmakers/les-coen-pas-tres-kasher,M32465.jpg",
@@ -1054,27 +1061,27 @@ export class Catalog {
             works: [
                 {
                     name: "Fargo",
-                    img: null,
+                    img: "../filmmakers/coen/fargo.jpg",
                     date: "1996"
                 },
                 {
                     name: "The Big Lebowski",
-                    img: null,
+                    img: "../filmmakers/coen/lebowski.png",
                     date: "1998"
                 },
                 {
                     name: "O'Brother",
-                    img: null,
+                    img: "../filmmakers/coen/o-brother.jpg",
                     date: "2000"
                 },
                 {
                     name: "No Country for Old Men",
-                    img: null,
+                    img: "../filmmakers/coen/no-country-for-old-men.jpg",
                     date: "2007"
                 },
                 {
                     name: "Burn After Reading",
-                    img: null,
+                    img: "../filmmakers/coen/Burn-After-Reading-furyosa.jpeg",
                     date: "2008"
                 },
 
@@ -1083,7 +1090,7 @@ export class Catalog {
         {
             artist: "Les soeur Wachowski",
             lifePeriod: {
-                start: new Date(1954, 0, 0),
+                start: 1954,
                 end: null
             },
             img: "../filmmakers/Soeurs-Wachowski-620x350.jpg",
@@ -1091,7 +1098,7 @@ export class Catalog {
             works: [
                 {
                     name: "Matrix",
-                    img: null,
+                    img: "../filmmakers/wachowski/matrix.jpg",
                     date: "1999"
                 },
             ]
@@ -1099,7 +1106,7 @@ export class Catalog {
         {
             artist: "Roman Polanski",
             lifePeriod: {
-                start: new Date(1933, 0, 0),
+                start: 1933,
                 end: null
             },
             img: "../filmmakers/Roman_Polanski_Cannes_2013.jpg",
@@ -1107,12 +1114,12 @@ export class Catalog {
             works: [
                 {
                     name: "Le pianiste",
-                    img: null,
+                    img: "../filmmakers/polanski/the-pianist.jpeg",
                     date: "1999"
                 },
                 {
                     name: "The Ghost Writer",
-                    img: null,
+                    img: "../filmmakers/polanski/the-ghost-writer.jpg",
                     date: "2010"
                 },
 
@@ -1121,7 +1128,7 @@ export class Catalog {
         {
             artist: "David Lynch",
             lifePeriod: {
-                start: new Date(1946, 0, 0),
+                start: 1946,
                 end: null
             },
             img: "../filmmakers/530483.jpg",
@@ -1129,17 +1136,17 @@ export class Catalog {
             works: [
                 {
                     name: "Elephant Man",
-                    img: null,
+                    img: "../filmmakers/lynch/elephant-man.jpg",
                     date: "2080"
                 },
                 {
                     name: "Blue Velvet",
-                    img: null,
+                    img: "../filmmakers/lynch/blue-velvet.jpg",
                     date: "2086"
                 },
                 {
                     name: "Mulholland Drive",
-                    img: null,
+                    img: "../filmmakers/lynch/mulholland-drive.jpg",
                     date: "2001"
                 },
 
@@ -1148,7 +1155,7 @@ export class Catalog {
         {
             artist: "Xavier Dolan",
             lifePeriod: {
-                start: new Date(1989, 0, 0),
+                start: 1989,
                 end: null
             },
             img: "../filmmakers/Xavier_Dolan_Cannes_2016.jpg",
@@ -1156,17 +1163,17 @@ export class Catalog {
             works: [
                 {
                     name: "J'ai tué ma mère",
-                    img: null,
+                    img: "../filmmakers/dolan/j-ai-tue-ma-mere.jpg",
                     date: "2009"
                 },
                 {
                     name: "Laurence Anyways",
-                    img: null,
+                    img: "../filmmakers/dolan/laurence-anyways.jpeg",
                     date: "2012"
                 },
                 {
                     name: "Mommy",
-                    img: null,
+                    img: "../filmmakers/dolan/mommy.jpg",
                     date: "2014"
                 },
             ]
@@ -1174,7 +1181,7 @@ export class Catalog {
         {
             artist: "David Fincher",
             lifePeriod: {
-                start: new Date(1962, 0, 0),
+                start: 1962,
                 end: null
             },
             img: "../filmmakers/fincher.jpg",
@@ -1182,32 +1189,32 @@ export class Catalog {
             works: [
                 {
                     name: "Alien",
-                    img: null,
+                    img: "../filmmakers/fincher/alien.jpg",
                     date: "1992"
                 },
                 {
                     name: "Seven",
-                    img: null,
+                    img: "../filmmakers/fincher/seven.png",
                     date: "1995"
                 },
                 {
                     name: "The Game",
-                    img: null,
+                    img: "../filmmakers/fincher/the-game.jpg",
                     date: "1997"
                 },
                 {
                     name: "Fight Club",
-                    img: null,
+                    img: "../filmmakers/fincher/fight-club.jpg",
                     date: "1999"
                 },
                 {
                     name: "The Social Network",
-                    img: null,
+                    img: "../filmmakers/fincher/social-network.jpg",
                     date: "2010"
                 },
                 {
                     name: "Gone Girl",
-                    img: null,
+                    img: "../filmmakers/fincher/gone-girl.jpg",
                     date: "2014"
                 },
 
@@ -1216,25 +1223,25 @@ export class Catalog {
         {
             artist: "Tim Burton",
             lifePeriod: {
-                start: new Date(1958, 0, 0),
+                start: 1958,
                 end: null
             },
-            img: "../filmmakers/fincher.jpg",
+            img: "../filmmakers/tim-burton.jpg",
             description: "",
             works: [
                 {
                     name: "Edward aux mains d'argent",
-                    img: null,
+                    img: "../filmmakers/tim-burton/edward-scissorhands.jpg",
                     date: "1990"
                 },
                 {
                     name: "Mars Attacks!",
-                    img: null,
+                    img: "../filmmakers/tim-burton/mars-attacks.jpg",
                     date: "1995"
                 },
                 {
                     name: "Charlie et la Chocolaterie",
-                    img: null,
+                    img: "../filmmakers/tim-burton/charlie-et-la-chocolaterie.jpg",
                     date: "2005"
                 },
             ]
@@ -1242,7 +1249,7 @@ export class Catalog {
         {
             artist: "Terry Gilliam",
             lifePeriod: {
-                start: new Date(1958, 0, 0),
+                start: 1958,
                 end: null
             },
             img: "../filmmakers/terrygilliam.jpg",
@@ -1250,12 +1257,12 @@ export class Catalog {
             works: [
                 {
                     name: "Monty Python : Sacré Graal !",
-                    img: null,
+                    img: "../filmmakers/terrygilliam/galloping_knights.jpg",
                     date: "1975"
                 },
                 {
                     name: "Brazil",
-                    img: null,
+                    img: "../filmmakers/terrygilliam/brazil.jpg",
                     date: "1985"
                 },
 

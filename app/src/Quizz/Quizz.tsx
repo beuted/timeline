@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Artist, Work } from '../Catalog';
 import 'react-vertical-timeline-component/style.min.css';
 
 export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
   let [reveal, setReveal] = React.useState(false);
-  let [work, setWork] = React.useState<Work>(null);
-  let [artist, setArtist] = React.useState<Artist>(null);
+  let [work, setWork] = React.useState<Work>();
+  let [artist, setArtist] = React.useState<Artist>();
 
   function setRandomWork() {
-    setArtist
+    const i = Math.floor(Math.random() * artists.length);
+    setArtist(artists[i]);
+    const j = Math.floor(Math.random() * artists[i].works.length);
+    setWork(artists[i].works[j]);
   }
+
+  useEffect(() => {
+    setRandomWork()
+  }, [])
 
   return (
     <div>

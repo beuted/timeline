@@ -10,7 +10,7 @@ export const ParticleBackground: React.FC<{canvasWidth: number, canvasHeight: nu
       var particle: any = {};
       particle.x =  Math.round( Math.random() * canvasWidth);
       particle.y =  Math.round( Math.random() * canvasHeight);
-      particle.rgba = "#fff";
+      particle.rgba = "#555";
       particle.vx = Math.round( Math.random() * 2) - 0.5;
       particle.vy = Math.round( Math.random() * 2) - 0.5;
       return particle;
@@ -20,9 +20,9 @@ export const ParticleBackground: React.FC<{canvasWidth: number, canvasHeight: nu
       return Math.sqrt( Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2) );
     }
 
-    var particles: any[] = [],
-     patriclesNum = 20,
-      minDistance = 300;
+    let particles: any[] = [];
+    let patriclesNum = 20 * ((canvasHeight * canvasWidth) / 1440000);
+    let minDistance = 300; //Math.min(canvasHeight, canvasWidth) / 3
 
     for(var i = 0; i < patriclesNum; i++){
       particles.push(createParticle());

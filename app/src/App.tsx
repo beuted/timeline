@@ -11,6 +11,7 @@ import ScrollToTop from './Router/ScrollToTop';
 import { useKeyPress } from './useKeyPress';
 import { useScrollPosition } from './useScrollPosition';
 import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
+import { Quizz } from './Quizz/Quizz';
 
 const loadCreations = () => import('./Creations/Creations');
 const loadPainters = () => import('./Painting/Painters');
@@ -92,6 +93,7 @@ const App: React.FC = () => {
             <Route path="/painters" component={Painters} />
             <Route path="/photographers" component={Photographers}/>
             <Route path="/filmmakers" component={FilmMakers}/>
+            <Route path="/quizz" component={Quizz}/>
             <Route path="/">
               <Home></Home>
             </Route>

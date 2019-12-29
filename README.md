@@ -2,4 +2,4 @@
 
 Website fresh start in React using hooks
 
-https://beuted.github.io/timeline/
+http://benoit.jehanno.net

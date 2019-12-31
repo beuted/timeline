@@ -129,7 +129,7 @@ export default function Creations(props: Props) {
    },
    {
       title: 'benoit.jehanno.net (v2)',
-      github: 'https://github.com/beuted/timelines',
+      github: 'https://github.com/beuted/timeline',
       image: 'bjehannonet2.PNG',
       date: '2019',
       description: ['My website', 're-done in react', 'using hooks and typescript']

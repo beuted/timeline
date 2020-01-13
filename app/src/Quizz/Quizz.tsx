@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { Artist, Work } from '../Catalog';
 import 'react-vertical-timeline-component/style.min.css';
+import { QuizzItem } from './QuizzItem';
+
+import './Quizz.scss';
 
 export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
   let [reveal, setReveal] = React.useState(false);
@@ -20,11 +23,19 @@ export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
 
   return (
     <div>
-      <div onClick={() => { setReveal(true); }}>
-        pwet
+      <div className='quizz-work'>
+        {work !== undefined && artist !== undefined ?
+          <QuizzItem work={work} artist={artist} reveal={reveal}></QuizzItem>
+          : null
+        }
       </div>
-      <div onClick={setRandomWork}>
-        next
+      <div className='quizz-btn-container'>
+        <div className='quizz-reveal-btn' onClick={() => { setReveal(true); }}>
+          reveal
+        </div>
+        <div className='quizz-next-btn' onClick={setRandomWork}>
+          next
+        </div>
       </div>
     </div>
   );

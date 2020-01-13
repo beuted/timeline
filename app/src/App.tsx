@@ -11,7 +11,7 @@ import ScrollToTop from './Router/ScrollToTop';
 import { useKeyPress } from './useKeyPress';
 import { useScrollPosition } from './useScrollPosition';
 import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
-import { Quizz } from './Quizz/Quizz';
+import { QuizzPage } from './Quizz/QuizzPage';
 
 const loadCreations = () => import('./Creations/Creations');
 const loadPainters = () => import('./Painting/Painters');
@@ -93,7 +93,7 @@ const App: React.FC = () => {
             <Route path="/painters" component={Painters} />
             <Route path="/photographers" component={Photographers}/>
             <Route path="/filmmakers" component={FilmMakers}/>
-            <Route path="/quizz" component={Quizz}/>
+            <Route path="/quizz/:category" component={QuizzPage}/>
             <Route path="/">
               <Home></Home>
             </Route>
@@ -109,7 +109,8 @@ function NavItem({children, to, exact}: {children: any, to: string, exact: boole
   return (
       <Route path={to} exact={exact} children={({match}) => (
           <li className={match ? "selected" : undefined}>
-              <Link to={to}>{children}</Link>
+              <Link to={to}
+              >{children}</Link>
           </li>
       )}/>
   )

@@ -16,7 +16,7 @@ export default function FilmMakers(props: Props) {
           Timeline about film makers that I care about.
         </p>
 
-        <Link to="/quizz"><i className="fa fa-question-circle"></i></Link>
+        <Link to="/quizz/filmmakers"><i className="fa fa-question-circle"></i></Link>
       </header>
       <TimeLine artists={Catalog.filmmakers}></TimeLine>
     </div>

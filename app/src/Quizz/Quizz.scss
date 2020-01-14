@@ -1,20 +1,27 @@
-.quizz-work {
+.quizz {
   position: relative;
   width: 50vw;
   padding-top: 100px;
   margin: auto;
 }
+.quizz-work {
+  position: absolute;
+  width: 50vw;
+}
 
 .quizz-btn-container {
-  position: relative;
-  width: 50vw;
+  z-index: 100;
+  position: absolute;
   margin: auto;
+  right: 0;
 }
 
-.quizz-reveal-btn {
-
-}
-
-.quizz-next-btn {
-
+.quizz-btn {
+  text-shadow: black 0px 0px 5px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  margin: 15px;
+  border: white solid 1px;
+  color: white
 }

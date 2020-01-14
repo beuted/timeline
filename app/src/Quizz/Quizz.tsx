@@ -11,6 +11,7 @@ export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
   let [artist, setArtist] = React.useState<Artist>();
 
   function setRandomWork() {
+    setReveal(false);
     const i = Math.floor(Math.random() * artists.length);
     setArtist(artists[i]);
     const j = Math.floor(Math.random() * artists[i].works.length);
@@ -22,20 +23,20 @@ export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
   }, [])
 
   return (
-    <div>
+    <div className='quizz'>
+      <div className='quizz-btn-container'>
+        <div className='quizz-btn' onClick={() => { setReveal(true); }}>
+          reveal
+        </div>
+        <div className='quizz-btn' onClick={setRandomWork}>
+          next
+        </div>
+      </div>
       <div className='quizz-work'>
         {work !== undefined && artist !== undefined ?
           <QuizzItem work={work} artist={artist} reveal={reveal}></QuizzItem>
           : null
         }
-      </div>
-      <div className='quizz-btn-container'>
-        <div className='quizz-reveal-btn' onClick={() => { setReveal(true); }}>
-          reveal
-        </div>
-        <div className='quizz-next-btn' onClick={setRandomWork}>
-          next
-        </div>
       </div>
     </div>
   );

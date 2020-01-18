@@ -697,6 +697,27 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Rembrandt",
+            lifePeriod: {
+                start: 1606,
+                end: 1669
+            },
+            img: "./painters/Rembrandt.jpg",
+            description: "Considéré comme l'un des plus grands peintres de l'histoire de la peinture, notamment de la peinture baroque, et l'un des plus importants peintres de l'École hollandaise du xviie siècle.",
+            works: [
+                {
+                    name: "La Leçon d'anatomie du docteur Tulp",
+                    img: "./painters/rembrandt/La-Lecon-d-anatomie-du-docteur-Tulp.jpg",
+                    date: "1632"
+                },
+                {
+                    name: "La ronde de nuit",
+                    img: "./painters/rembrandt/la-ronde-de-nuit.jpg",
+                    date: "1642"
+                },
+            ]
+        },
 
     ]
 
@@ -1266,6 +1287,32 @@ export class Catalog {
                     date: "1985"
                 },
 
+            ]
+        },
+        {
+            artist: "Pedro Almodóvar",
+            lifePeriod: {
+                start: 1949,
+                end: null
+            },
+            img: "../filmmakers/Almodovar.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Tout sur ma mère",
+                    img: "../filmmakers/almodovar/tout-sur-ma-mere.jpg",
+                    date: "1999"
+                },
+                {
+                    name: "Parle avec elle",
+                    img: "../filmmakers/almodovar/parle-avec-elle.jpg",
+                    date: "2002"
+                },
+                {
+                    name: "Volver",
+                    img: "../filmmakers/almodovar/volver.jpg",
+                    date: "2006"
+                },
             ]
         },
     ]

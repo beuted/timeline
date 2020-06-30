@@ -24,27 +24,27 @@ export class Catalog {
                 start: 1881,
                 end: 1973
             },
-            img: "./painters/Pablo_picasso.jpg",
+            img: "../painters/Pablo_picasso.jpg",
             description: "Developpe le cubisme en 1907 avec les peintres Georges Braque et dans une certaine mesure Auguste Herbin. The Blue Period (1901–1904), the Rose Period (1904–1906), the African-influenced Period (1907–1909), Analytic Cubism (1909–1912), and Synthetic Cubism (1912–1919)",
             works: [
                 {
                     name: "Guernica",
-                    img: "./painters/picasso/guernica.jpg",
+                    img: "../painters/picasso/guernica.jpg",
                     date: "1937"
                 },
                 {
                     name: "Les Demoiselles d'Avignon",
-                    img: "./painters/picasso/122634980_o.jpg",
+                    img: "../painters/picasso/122634980_o.jpg",
                     date: "1907"
                 },
                 {
                     name: "La Femme qui pleure",
-                    img: "./painters/picasso/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg",
+                    img: "../painters/picasso/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg",
                     date: "1937"
                 },
                 {
                     name: "Don Quixote",
-                    img: "./painters/picasso/lithographie-don-quixote-par-pablo-picasso-1955-6.jpg",
+                    img: "../painters/picasso/lithographie-don-quixote-par-pablo-picasso-1955-6.jpg",
                     date: "1955"
                 },
             ]
@@ -651,7 +651,7 @@ export class Catalog {
                 },
                 {
                     name: "Intérieur hollandais I",
-                    img: "../painters/miro/jdutch-interior-i-1928.jpg",
+                    img: "../painters/miro/dutch-interior-i-1928.jpg",
                     date: "1928"
                 },
                 {
@@ -703,17 +703,17 @@ export class Catalog {
                 start: 1606,
                 end: 1669
             },
-            img: "./painters/Rembrandt.jpg",
+            img: "../painters/Rembrandt.jpg",
             description: "Considéré comme l'un des plus grands peintres de l'histoire de la peinture, notamment de la peinture baroque, et l'un des plus importants peintres de l'École hollandaise du xviie siècle.",
             works: [
                 {
                     name: "La Leçon d'anatomie du docteur Tulp",
-                    img: "./painters/rembrandt/La-Lecon-d-anatomie-du-docteur-Tulp.jpg",
+                    img: "../painters/rembrandt/La-Lecon-d-anatomie-du-docteur-Tulp.jpg",
                     date: "1632"
                 },
                 {
                     name: "La ronde de nuit",
-                    img: "./painters/rembrandt/la-ronde-de-nuit.jpg",
+                    img: "../painters/rembrandt/la-ronde-de-nuit.jpg",
                     date: "1642"
                 },
             ]
@@ -1316,4 +1316,55 @@ export class Catalog {
             ]
         },
     ]
+
+    public static writers: Artist[] = [
+        {
+            artist: "Isaac Asimov",
+            lifePeriod: {
+                start: 1920,
+                end: 1992
+            },
+            img: "../writers/isaac-asimov.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Fondation",
+                    img: "../writers/fondation.jpg",
+                    date: "1951"
+                },
+            ]
+        },
+    ]
+
+    public static formulas: MathsFormula[] = [
+        {
+            name: 'Théorème de Pythagore',
+            date: -6000,
+            img: '../maths/pythagore.png'
+        },
+        {
+            name: 'Théorème de Thalès',
+            date: -2000,
+            img: '../maths/thales.png'
+        },
+        {
+            name: 'Coefficient Binomial',
+            date: 1713,
+            img: '../maths/Coefficient_binomial.svg'
+        },
+        {
+            name: 'Loi binomiale',
+            date: 1713,
+            img: '../maths/loibinomial.svg',
+            text: "les lois binomiales modélisent le nombre de succès obtenus lors de la répétition indépendante de plusieurs expériences aléatoires identiques."
+        },
+
+    ]
+}
+
+export type MathsFormula = {
+    name: string,
+    date: number,
+    img?: string,
+    text?: string
 }

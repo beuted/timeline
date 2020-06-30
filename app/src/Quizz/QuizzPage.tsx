@@ -12,6 +12,7 @@ export const QuizzPage: React.FC<void> = () => {
     case 'painters': artists = Catalog.painters; break;
     case 'photographers': artists = Catalog.photographers; break;
     case 'filmmakers': artists = Catalog.filmmakers; break;
+    case 'writers': artists = Catalog.writers; break;
   }
 
   return (

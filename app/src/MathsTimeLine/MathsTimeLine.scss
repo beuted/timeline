@@ -1,0 +1,45 @@
+.formulas-container {
+  margin: auto;
+  width: 900px;
+}
+
+.formula {
+  width: 900px;
+  text-align: center;
+  height: 60vh;
+  display: inline-block;
+  margin-bottom: 150px;
+}
+
+.formula-img {
+  max-width: 900px;
+  height: 60vh;
+  background-color: #fff;
+}
+
+.formula-img-text {
+  width: 900px;
+  background-color: #fff;
+}
+
+.formula-desc {
+  position: absolute;
+
+  margin-left: 15px;
+  margin-top: 15px;
+
+  color: white;
+  text-shadow: black 0px 0px 5px;
+  font-weight: 500;
+}
+
+.formula-desc-title {
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.formula:hover .formula-desc-title {
+  margin-top: 15px;
+  opacity: 1;
+}

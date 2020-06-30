@@ -1315,6 +1315,28 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Wes Andrerson",
+            lifePeriod: {
+                start: 1969,
+                end: null
+            },
+            img: "../filmmakers/Wes_Anderson.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Moonrise Kingdom",
+                    img: "../filmmakers/wes-anderson/moonrisekingdom.png",
+                    date: "2012"
+                },
+                {
+                    name: "The Grand Budapest Hotel",
+                    img: "../filmmakers/wes-anderson/grand-budapest-hotel.jpg",
+                    date: "2012"
+                }
+            ]
+        },
+
     ]
 
     public static writers: Artist[] = [

@@ -121,6 +121,13 @@ a {
   height: 60px;
 }
 
+@media (max-width: 1170px) {
+  .vertical-timeline-element-icon> img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* ***************** */
 
 .scroll-indicator-wrapper {
@@ -129,6 +136,12 @@ a {
   top: 30%;
   z-index: 100;
   transition: right .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+@media (max-width: 1170px) {
+  .scroll-indicator-wrapper {
+    right: 10px;
+  }
 }
 
 .scroll-indicator-wrapper.hidden {

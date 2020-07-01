@@ -101,7 +101,7 @@ const App: React.FC = () => {
             <Route path="/maths" component={Maths} />
             <Route path="/writers" component={Writers} />
             <Route path="/">
-              <Home></Home>
+              <Home setShowPrivateMenus={setShowPrivateMenus}></Home>
             </Route>
           </AnimatedSwitch>
         </ScrollToTop>

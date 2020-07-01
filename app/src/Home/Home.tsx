@@ -3,11 +3,19 @@ import 'react-vertical-timeline-component/style.min.css';
 import './Home.scss';
 import { ParticleBackground } from '../ParticleBackground/ParticleBackground';
 
-export const Home: React.FC = () => {
+export const Home: React.FC<{setShowPrivateMenus: (x: boolean) => void }> = ({ setShowPrivateMenus }) => {
+  let [timeClicked, setTimeClicked] = React.useState(0);
+
+  function activateHiddenFeature() {
+    setTimeClicked(timeClicked+1);
+    if (timeClicked >= 10) {
+      setShowPrivateMenus(true);
+    }
+  }
   return (
     <div className="home">
      <header className="app-header name">
-        <span>Benoît Jehanno <a className="pgp-key" href="http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0xF8F8B083D7F09E1F"><i className="fa fa-key fa-fw"></i></a></span>
+        <span><span onClick={activateHiddenFeature}>Benoît Jehanno</span> <a className="pgp-key" href="http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0xF8F8B083D7F09E1F"><i className="fa fa-key fa-fw"></i></a></span>
         <ul className="home-social-buttons">
           <li>
             <a href="https://twitter.com/DeKajoo"><i className="fa fa-twitter fa-fw"></i> <span className="network-name">Twitter</span></a>
@@ -26,7 +34,6 @@ export const Home: React.FC = () => {
       <div className="particle-background">
         <ParticleBackground canvasWidth={window.innerWidth} canvasHeight={window.innerHeight}></ParticleBackground>
       </div>
-     
     </div>
   );
 }

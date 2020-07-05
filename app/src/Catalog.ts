@@ -1356,6 +1356,144 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Frank Herbert",
+            lifePeriod: {
+                start: 1920,
+                end: 1986
+            },
+            img: "../writers/Frank_Herbert.jpg",
+            description: "His son is Brian Herbert",
+            works: [
+                {
+                    name: "Dune",
+                    img: "../writers/Dune_Le_Cycle_de_Dune.jpg",
+                    date: "1965"
+                },
+            ]
+        },
+        {
+            artist: "René Barjavel",
+            lifePeriod: {
+                start: 1911,
+                end: 1985
+            },
+            img: "../writers/Rene-Barjavel.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Ravage",
+                    img: "../writers/Ravage.jpg",
+                    date: "1943"
+                },
+                {
+                    name: "Le voyageur imprudent",
+                    img: "../writers/Le_Voyageur_imprudent.jpg",
+                    date: "1944"
+                },
+                {
+                    name: "Le grand secret",
+                    img: "../writers/Le_Grand_Secret.gif",
+                    date: "1973"
+                },
+            ]
+        },
+        {
+            artist: "Stéphane Beauverger",
+            lifePeriod: {
+                start: 1969,
+                end: null
+            },
+            img: "../writers/Stéphane_Beauverger.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Le Déchronologue",
+                    img: "../writers/Le_Dechronologue.jpg",
+                    date: "2009"
+                },
+            ]
+        },
+        {
+            artist: "Alain Damasio",
+            lifePeriod: {
+                start: 1969,
+                end: null
+            },
+            img: "../writers/Alain_Damasio.jpg",
+            description: "",
+            works: [
+                {
+                    name: "La Horde du Contrevent",
+                    img: "../writers/La_Horde_du_Contrevent.jpg",
+                    date: "2004"
+                },
+            ]
+        },
+        {
+            artist: "Stephen King",
+            lifePeriod: {
+                start: 1947,
+                end: null
+            },
+            img: "../writers/Stephen_King.webp",
+            description: "",
+            works: [
+                {
+                    name: "Différentes Saisons",
+                    img: "../writers/Differentes_Saisons.jpg",
+                    date: "1982"
+                },
+            ]
+        },
+        {
+            artist: "Douglas Adams",
+            lifePeriod: {
+                start: 1952,
+                end: 2001
+            },
+            img: "../writers/Douglas_adams.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Le Guide du voyageur galactique",
+                    img: "../writers/H2G2_tome_1.jpg",
+                    date: "1979"
+                },
+            ]
+        },
+        {
+            artist: "Dan Simmons",
+            lifePeriod: {
+                start: 1948,
+                end: null
+            },
+            img: "../writers/AVT_Dan-Simmons_299.jpeg",
+            description: "",
+            works: [
+                {
+                    name: "Hypérion",
+                    img: "../writers/Hyperion.jpg",
+                    date: "1989"
+                },
+            ]
+        },
+        {
+            artist: "Aldous Huxley",
+            lifePeriod: {
+                start: 1894,
+                end: 1963
+            },
+            img: "../writers/Aldous_Huxley.jpg",
+            description: "Ecrit \"Le meilleur des mondes\" avant 1984 de George Orwell (1949)",
+            works: [
+                {
+                    name: "Le meilleur des mondes",
+                    img: "../writers/Le_Meilleur_des_mondes.jpg",
+                    date: "1931"
+                },
+            ]
+        },
     ]
 
     public static formulas: MathsFormula[] = [

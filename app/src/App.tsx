@@ -14,6 +14,7 @@ import { ScrollIndicator } from './ScrollIndicator/ScrollIndicator';
 import { QuizzPage } from './Quizz/QuizzPage';
 import Maths from './Maths/Maths';
 import Writers from './Writers/Writers';
+import SocioPolitique from './SocioPolitique/SocioPolitique';
 
 const loadCreations = () => import('./Creations/Creations');
 const loadPainters = () => import('./Painting/Painters');
@@ -74,6 +75,7 @@ const App: React.FC = () => {
               { showPrivateMenus ? <NavItem exact to="/filmmakers">FilmMakers</NavItem> : null }
               { showPrivateMenus ? <NavItem exact to="/maths">Maths</NavItem> : null }
               { showPrivateMenus ? <NavItem exact to="/writers">Writers</NavItem> : null }
+              { showPrivateMenus ? <NavItem exact to="/socio-politique">Socio-Politique</NavItem> : null }
             </ul>
           </nav>
         </div>
@@ -100,6 +102,7 @@ const App: React.FC = () => {
             <Route path="/quizz/:category" component={QuizzPage}/>
             <Route path="/maths" component={Maths} />
             <Route path="/writers" component={Writers} />
+            <Route path="/socio-politique" component={SocioPolitique} />
             <Route path="/">
               <Home setShowPrivateMenus={setShowPrivateMenus}></Home>
             </Route>

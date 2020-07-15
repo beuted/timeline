@@ -718,6 +718,23 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Gustave Courbet",
+            lifePeriod: {
+                start: 1819,
+                end: 1877
+            },
+            img: "../painters/Gustave_Courbet.jpg",
+            description: "Peintre et sculpteur français, chef de file du courant réaliste",
+            works: [
+                {
+                    name: "L'origine du monde",
+                    img: "../painters/courbet/origine-du-monde.jpg",
+                    date: "1866"
+                }
+            ]
+        },
+
 
     ]
 

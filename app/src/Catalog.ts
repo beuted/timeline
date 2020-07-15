@@ -734,6 +734,22 @@ export class Catalog {
                 }
             ]
         },
+        {
+            artist: "Eugène Delacroix",
+            lifePeriod: {
+                start: 1798,
+                end: 1863
+            },
+            img: "../painters/eugene-delacroix.jpg",
+            description: "Peintre et sculpteur français, chef de file du courant réaliste",
+            works: [
+                {
+                    name: "La Liberté guidant le peuple",
+                    img: "../painters/delacroix/delacroix-liberte-guidant-peuple.jpg",
+                    date: "1830"
+                }
+            ]
+        },
 
 
     ]

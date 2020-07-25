@@ -139,6 +139,11 @@ export class Catalog {
                     img: "../painters/manet/The_Fifer.jpg",
                     date: "1866"
                 },
+                {
+                    name: "La pie",
+                    img: "../painters/manet/La_pie.jpg",
+                    date: "1868"
+                },
             ]
         },
         {
@@ -470,7 +475,7 @@ export class Catalog {
                 end: 1903
             },
             img: "../painters/Paul_Gauguin.jpg",
-            description: "Un des plus importants précurseurs de l'art moderne avec Klimt, Cézanne, Munch, Seurat et van Gogh",
+            description: "Un des plus importants précurseurs de l'art moderne avec Klimt, Cézanne, Munch, Seurat et van Gogh. Synthetisme (Contour noir, aplats couleurs simples)",
             works: [
                 {
                     name: "Arearea",
@@ -750,8 +755,121 @@ export class Catalog {
                 }
             ]
         },
-
-
+        {
+            artist: "Maurice Denis",
+            lifePeriod: {
+                start: 1870,
+                end: 1943
+            },
+            img: "../painters/Maurice_Denis.jpg",
+            description: "Postimpressionnisme",
+            works: [
+                {
+                    name: "Avril",
+                    img: "../painters/maurice-denis/traverse-de-la-passion.jpg",
+                    date: "1892"
+                },
+                {
+                    name: "The Offertory at Calvary",
+                    img: "../painters/maurice-denis/calvary.jpg",
+                    date: "1890"
+                }
+            ]
+        },
+        {
+            artist: "Edgar Degas",
+            lifePeriod: {
+                start: 1834,
+                end: 1917
+            },
+            img: "../painters/Edgar_Degas.jpg",
+            description: "Un artiste peintre, graveur, sculpteur et photographe, naturaliste et impressionniste français",
+            works: [
+                {
+                    name: "La classe de danse",
+                    img: "../painters/degas/la-classe-de-dance.jpg",
+                    date: "1874"
+                },
+                {
+                    name: "L'Absinthe",
+                    img: "../painters/degas/labsinthe.jpg",
+                    date: "1876"
+                },
+                {
+                    name: "La Petite Danseuse de quatorze ans",
+                    img: "../painters/degas/la-petite-danseuse.jpg",
+                    date: "1881"
+                }
+            ]
+        },
+        {
+            artist: "Camille Pissaro",
+            lifePeriod: {
+                start: 1830,
+                end: 1903
+            },
+            img: "../painters/Camille_Pissarro.jpg",
+            description: "Peintre impressionniste puis néo-impressionniste franco-danois",
+            works: [
+                {
+                    name: "Boulevard Montmartre, Effet de nuit",
+                    img: "../painters/pissarro/montmartre_nuit.jpg",
+                    date: "1897"
+                },
+                {
+                    name: "Boulevard Montmartre, matinée de printemps",
+                    img: "../painters/pissarro/montmartre_printemps.jpg",
+                    date: "1897"
+                },
+                {
+                    name: "Maison de paysants",
+                    img: "../painters/pissarro/maison-paysants.jpg",
+                    date: "1887"
+                }
+            ]
+        },
+        {
+            artist: "Paul Signac",
+            lifePeriod: {
+                start: 1863,
+                end: 1935
+            },
+            img: "../painters/Paul_Signac_1923.jpg",
+            description: "Artiste peintre paysagiste français, proche du mouvement libertaire2, qui donna naissance au pointillisme, avec le peintre Seurat",
+            works: [
+                {
+                    name: "Le Port de La Rochelle",
+                    img: "../painters/signac/Entree_du_port_de_la_Rochelle.jpg",
+                    date: "1921"
+                },
+                {
+                    name: "Le Port de Saint-Tropez",
+                    img: "../painters/signac/port-saint-tropez.jpg",
+                    date: "1899"
+                }
+            ]
+        },
+        {
+            artist: "Odilon Redon",
+            lifePeriod: {
+                start: 1840,
+                end: 1916
+            },
+            img: "../painters/Odilon_Redon.jpg",
+            description: "peintre et graveur symboliste français. Son art explore les aspects de la pensée, la part sombre et ésotérique de l'âme humaine, empreinte des mécanismes du rêve",
+            works: [
+                {
+                    name: "Le cyclope",
+                    img: "../painters/redon/cyclops.jpg",
+                    date: "1914"
+                },
+                {
+                    name: "Parmis les fleurs",
+                    img: "../painters/redon/parmis-les-fleurs.jpg",
+                    date: "1905"
+                },
+            ]
+        },
     ]
 
     public static photographers: Artist[] = [
@@ -1551,7 +1669,40 @@ export class Catalog {
             img: '../maths/loibinomial.svg',
             text: "les lois binomiales modélisent le nombre de succès obtenus lors de la répétition indépendante de plusieurs expériences aléatoires identiques."
         },
+    ]
 
+    public static history: Periods[] = [
+        {
+            name: 'Égypte ancienne',
+            start: -3150,
+            end: -31,
+            events: []
+        },
+        {
+            name: 'Grèce antique',
+            start: -776,
+            end: -323,
+            events: [
+                {
+                    name: 'Premier J-O',
+                    date: -776
+                },
+                {
+                    name: 'La Guerre du Péloponnèse',
+                    text: "la guerre éclate entre Athènes et Sparte, soutenues par leurs alliés respectifs. Sparte a enfin construit une flotte (avec l'aide des Perses) capable de rivaliser avec la suprématie maritime athénienne, et trouvé en Lysandre un brillant chef militaire, qui occupera l'Hellespont, passage stratégique pour l'approvisionnement en blé d'Athènes. Menacée de famine, Athènes envoie ses derniers navires contre Lysandre, qui les défait définitivement à Aigos Potamos en 405. Sa flotte perdue, Athènes est au bord de la banqueroute. En 404, Athènes demande la paix, et Sparte dicte de dures conditions : Athènes perd ses murailles, sa flotte, et toutes ses possessions outre-mer. Le parti anti-démocratique, soutenu par Sparte, prend le pouvoir.",
+                    date: -431,
+                    start: -431,
+                    end: -405
+                },
+                {
+                    name: 'Alexandre le grand',
+                    images: ["https://fr.wikipedia.org/wiki/Histoire_de_la_Gr%C3%A8ce_antique#/media/Fichier:MacedonEmpire.jpg"],
+                    text: "Fils de Philippe II, élève d'Aristote et roi de Macédoine à partir de 336, il devient l'un des plus grands conquérants de l'histoire en prenant possession de l'immense empire perse et en s'avançant jusqu'aux rives de l'Indus.",
+                    date: -356,
+                    start: -356,
+                    end: -323
+                }]
+        }
     ]
 }
 
@@ -1560,4 +1711,21 @@ export type MathsFormula = {
     date: number,
     img?: string,
     text?: string
+}
+
+export type Periods = {
+    name: string,
+    text?: string
+    start: number,
+    end: number,
+    events: Event[]
+}
+
+export type Event = {
+    name: string,
+    text?: string,
+    date: number,
+    start?: number,
+    end?: number,
+    images?: string[]
 }

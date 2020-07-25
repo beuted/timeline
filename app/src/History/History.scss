@@ -1,0 +1,71 @@
+.container {
+  margin: auto;
+  width: 900px;
+  color: #fff;
+}
+
+.anchor {
+  position: relative;
+}
+
+.period {
+  position: absolute;
+  border-left: white solid 2px;
+  padding: 10px;
+  width: 100%;
+}
+
+.period-name {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+}
+
+.event {
+  position: absolute;
+  margin-left: -100px-3px;
+  cursor: pointer;
+  height: 20px;
+  width: 100%;
+}
+.event:hover {
+  .event-date {
+    opacity: 1;
+  }
+}
+
+.bullet {
+  background-color: white;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: white solid 1px;
+  border-radius: 2.3px;
+}
+
+.event-name {
+  display: inline-block;
+  margin-left: 10px;
+  height: 20px;
+}
+
+.event-date {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  color: white;
+  width: 100px;
+  height: 20px;
+}
+
+.details {
+  transform: scale(1);
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  background-color: red;
+}

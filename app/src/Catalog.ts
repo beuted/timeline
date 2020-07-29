@@ -1645,6 +1645,134 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Philip K.Dick",
+            lifePeriod: {
+                start: 1928,
+                end: 1982
+            },
+            img: "../writers/Philip_K_Dick.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Ubik",
+                    img: "../writers/Ubik.jpg",
+                    date: "1969"
+                },
+            ]
+        },
+        {
+            artist: "Pierre Lemaitre",
+            lifePeriod: {
+                start: 1951,
+                end: null
+            },
+            img: "../writers/Lemaitre_Pierre.png",
+            description: "",
+            works: [
+                {
+                    name: "Au revoir là-haut",
+                    img: "../writers/Au_revoir_la_haut.jpg",
+                    date: "2013"
+                },
+            ]
+        },
+        {
+            artist: "William Golding",
+            lifePeriod: {
+                start: 1911,
+                end: 1993
+            },
+            img: "../writers/Lemaitre_Pierre.png",
+            description: "",
+            works: [
+                {
+                    name: "Sa Majesté des mouches",
+                    img: "../writers/samajestedesmouches.jpg",
+                    date: "1954"
+                },
+            ]
+        },
+        {
+            artist: "Ernest Hemingway",
+            lifePeriod: {
+                start: 1899,
+                end: 1961
+            },
+            img: "../writers/ernest-hemingway.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Le viel homme et la mer",
+                    img: "../writers/samajestedesmouches.jpg",
+                    date: "1952"
+                },
+            ]
+        },
+        {
+            artist: "Milan Kundera",
+            lifePeriod: {
+                start: 1929,
+                end: 1981
+            },
+            img: "../writers/kundera.jpg",
+            description: "",
+            works: [
+                {
+                    name: "L'Insoutenable Légèreté de l'être",
+                    img: "../writers/L_Insoutenable_Legerete_de_l_etre.jpg",
+                    date: "1984"
+                },
+            ]
+        },
+        {
+            artist: "Milan Kundera",
+            lifePeriod: {
+                start: 1929,
+                end: 1981
+            },
+            img: "../writers/kundera.jpg",
+            description: "",
+            works: [
+                {
+                    name: "L'Insoutenable Légèreté de l'être",
+                    img: "../writers/L_Insoutenable_Legerete_de_l_etre.jpg",
+                    date: "1984"
+                },
+            ]
+        },
+        {
+            artist: "Alexandre Dumas",
+            lifePeriod: {
+                start: 1802,
+                end: 1870
+            },
+            img: "../writers/dumas.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Le comte de Monte-Cristo",
+                    img: "../writers/Le-comte-de-monte-cristo.jpg",
+                    date: "1844"
+                },
+            ]
+        },
+        {
+            artist: "Michael Crichton",
+            lifePeriod: {
+                start: 1942,
+                end: 2008
+            },
+            img: "../writers/crichton.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Sphère",
+                    img: "../writers/Sphere.jpg",
+                    date: "1987"
+                },
+            ]
+        },
     ]
 
     public static formulas: MathsFormula[] = [
@@ -1669,6 +1797,13 @@ export class Catalog {
             img: '../maths/loibinomial.svg',
             text: "les lois binomiales modélisent le nombre de succès obtenus lors de la répétition indépendante de plusieurs expériences aléatoires identiques."
         },
+        {
+            name: 'Somme premiers nombres',
+            date: 1700,
+            img: '../maths/somme-premiers-nombre.PNG',
+            text: "Gauss aurait sortie la formule okl quand son prof l'a punis en lui demandant de calculer la somme des premiers nombres de 1 à 100"
+        },
+
     ]
 
     public static history: Periods[] = [

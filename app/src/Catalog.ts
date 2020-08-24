@@ -870,6 +870,69 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Henri Matisse",
+            lifePeriod: {
+                start: 1869,
+                end: 1954
+            },
+            img: "../painters/Henri_Matisse.jpg",
+            description: "Figure majeure du xxe siècle, son influence sur l'art de la seconde partie de ce siècle est considérable par l'utilisation de la simplification, de la stylisation, de la synthèse et de la couleur comme seul sujet de la peinture, aussi bien pour les nombreux peintres figuratifs ou abstraits qui se réclameront de lui et de ses découvertes. Il fut le chef de file du fauvisme.",
+            works: [
+                {
+                    name: "La Joie de vivre",
+                    img: "../painters/matisse/matisse-bonheur-vivre.jpg",
+                    date: "1906"
+                },
+                {
+                    name: "Nu bleu II",
+                    img: "../painters/matisse/nu_bleu_2.jpg",
+                    date: "1952"
+                },
+                {
+                    name: "Femme au chapeau",
+                    img: "../painters/matisse/la_femme_au_chapeau.jpg",
+                    date: "1905"
+                },
+                {
+                    name: "Luxe, Calme et Volupté",
+                    img: "../painters/matisse/luxe_calme_et_volupte.jpg",
+                    date: "1904"
+                },
+                {
+                    name: "La Danse de Merion",
+                    img: "../painters/matisse/la_dance_de_merion.jpg",
+                    date: "1932"
+                },
+            ]
+        },
+        {
+            artist: "Jackson Pollock",
+            lifePeriod: {
+                start: 1912,
+                end: 1956
+            },
+            img: "../painters/jackson-pollock.jpg",
+            description: "Figure majeure du xxe siècle, son influence sur l'art de la seconde partie de ce siècle est considérable par l'utilisation de la simplification, de la stylisation, de la synthèse et de la couleur comme seul sujet de la peinture, aussi bien pour les nombreux peintres figuratifs ou abstraits qui se réclameront de lui et de ses découvertes. Il fut le chef de file du fauvisme.",
+            works: [
+                {
+                    name: "Authumn Rhythm",
+                    img: "../painters/pollock/autumn_rhythm.jpg",
+                    date: "1950"
+                },
+                {
+                    name: "Number 1",
+                    img: "../painters/pollock/number_1.jpg",
+                    date: "1950"
+                },
+                {
+                    name: "The Deep",
+                    img: "../painters/pollock/the_deep.jpg",
+                    date: "1953"
+                },
+
+            ]
+        },
     ]
 
     public static photographers: Artist[] = [
@@ -1802,6 +1865,12 @@ export class Catalog {
             date: 1700,
             img: '../maths/somme-premiers-nombre.PNG',
             text: "Gauss aurait sortie la formule okl quand son prof l'a punis en lui demandant de calculer la somme des premiers nombres de 1 à 100"
+        },
+        {
+            name: 'Equilibre de Nash',
+            date: 1700,
+            img: '../maths/nash.PNG',
+            text: "En théorie des jeux, un équilibre de Nash est une situation où : 1/ Chaque joueur prévoit correctement le choix des autres, 2/ Chaque joueur maximise son gain, compte tenu de cette prévision."
         },
 
     ]

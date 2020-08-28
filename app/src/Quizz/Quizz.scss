@@ -4,9 +4,16 @@
   padding-top: 100px;
   margin: auto;
 }
+
+@media (max-width: 1170px) {
+  .quizz {
+    width: 80vw;
+  }
+}
+
 .quizz-work {
   position: absolute;
-  width: 50vw;
+  width: 100%;
 }
 
 .quizz-btn-container {
@@ -24,4 +31,11 @@
   margin: 15px;
   border: white solid 1px;
   color: white
+}
+
+@media (max-width: 860px) {
+  .quizz-btn {
+    padding: 3px 6px 3px 6px;
+    margin: 5px;
+  }
 }

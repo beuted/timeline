@@ -147,3 +147,25 @@ a {
 .scroll-indicator-wrapper.hidden {
   right: -10px;
 }
+
+/* *********** */
+
+.container {
+  margin: auto;
+  width: 900px;
+}
+
+.article {
+  color: #fff;
+
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+  }
+}

@@ -15,6 +15,7 @@ import { QuizzPage } from './Quizz/QuizzPage';
 import Maths from './Maths/Maths';
 import Writers from './Writers/Writers';
 import SocioPolitique from './SocioPolitique/SocioPolitique';
+import Economy from './Economy/Economy';
 import History from './History/History';
 
 const loadCreations = () => import('./Creations/Creations');
@@ -78,6 +79,7 @@ const App: React.FC = () => {
               { showPrivateMenus ? <NavItem exact to="/writers">Writers</NavItem> : null }
               { showPrivateMenus ? <NavItem exact to="/socio-politique">Socio-Politique</NavItem> : null }
               { showPrivateMenus ? <NavItem exact to="/history">History</NavItem> : null }
+              { showPrivateMenus ? <NavItem exact to="/economy">Economy</NavItem> : null }
             </ul>
           </nav>
         </div>
@@ -105,6 +107,7 @@ const App: React.FC = () => {
             <Route path="/maths" component={Maths} />
             <Route path="/writers" component={Writers} />
             <Route path="/socio-politique" component={SocioPolitique} />
+            <Route path="/economy" component={Economy} />
             <Route path="/history" component={History} />
             <Route path="/">
               <Home setShowPrivateMenus={setShowPrivateMenus}></Home>

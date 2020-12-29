@@ -41,7 +41,7 @@ export default function Creations(props: Props) {
     },
     {
        title: 'csgo-mates.com',
-       demo: 'http://csgo-mates.com',
+       github: 'https://github.com/beuted/csgo-mates',
        image: 'csgo-mates.PNG',
        date: '2013-2014',
        description: ['My First website, written in angularJS', 'Backend in NodeJs, aggregation of', 'steam official and non-official API', 'Authentication through Steam OAuth']

@@ -533,7 +533,7 @@ export class Catalog {
                 img: "../painters/botero/mona-lis-a-12-ans.jpg",
                 date: "1959"
             }
-        ]
+            ]
         },
         {
             artist: "Georges Seurat",
@@ -931,6 +931,32 @@ export class Catalog {
                     date: "1953"
                 },
 
+            ]
+        },
+        {
+            artist: "Piet Mondrian",
+            lifePeriod: {
+                start: 1872,
+                end: 1944
+            },
+            img: "../painters/Piet_Mondrian.jpg",
+            description: "Peintre néerlandais reconnu comme l'un des pionniers de l’abstraction.",
+            works: [
+                {
+                    name: "Composition II en rouge, bleu et jaune",
+                    img: "../painters/mondrian/Composition_en_rouge_jaune_bleu_et_noir.jpg",
+                    date: "1939"
+                },
+                {
+                    name: "Trafalgar Square",
+                    img: "../painters/mondrian/trafalgar_square.jpg",
+                    date: "1943"
+                },
+                {
+                    name: "Broadway Boogie-Woogie",
+                    img: "../painters/mondrian/Broadway_Boogie_Woogie.jpg",
+                    date: "1943"
+                },
             ]
         },
     ]

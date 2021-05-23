@@ -1,9 +1,9 @@
-.formulas-container {
+.elements-container {
   margin: auto;
   width: 900px;
 }
 
-.formula {
+.element {
   width: 900px;
   text-align: center;
   height: 60vh;
@@ -11,18 +11,18 @@
   margin-bottom: 150px;
 }
 
-.formula-img {
+.element-img {
   max-width: 900px;
   height: 60vh;
   background-color: #fff;
 }
 
-.formula-img-text {
+.element-img-text {
   width: 900px;
   background-color: #fff;
 }
 
-.formula-desc {
+.element-desc {
   position: absolute;
 
   margin-left: 15px;
@@ -33,13 +33,13 @@
   font-weight: 500;
 }
 
-.formula-desc-title {
+.element-desc-title {
   margin-top: 15px;
   opacity: 0;
   transition: opacity .5s;
 }
 
-.formula:hover .formula-desc-title {
+.element:hover .element-desc-title {
   margin-top: 15px;
   opacity: 1;
 }

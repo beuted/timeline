@@ -1,7 +1,7 @@
 export interface Work {
     name: string,
-    img: string | null,
-    date?: string | null
+    img: string,
+    date?: string
     description?: string
 }
 
@@ -1864,37 +1864,37 @@ export class Catalog {
         },
     ]
 
-    public static formulas: MathsFormula[] = [
+    public static formulas: LightTimeLineElement[] = [
         {
             name: 'Théorème de Pythagore',
-            date: -6000,
+            date: '6000 av J.C',
             img: '../maths/pythagore.png'
         },
         {
             name: 'Théorème de Thalès',
-            date: -2000,
+            date: '2000 av J.C',
             img: '../maths/thales.png'
         },
         {
             name: 'Coefficient Binomial',
-            date: 1713,
+            date: '1713',
             img: '../maths/Coefficient_binomial.svg'
         },
         {
             name: 'Loi binomiale',
-            date: 1713,
+            date: '1713',
             img: '../maths/loibinomial.svg',
             text: "les lois binomiales modélisent le nombre de succès obtenus lors de la répétition indépendante de plusieurs expériences aléatoires identiques."
         },
         {
             name: 'Somme premiers nombres',
-            date: 1700,
+            date: '1700',
             img: '../maths/somme-premiers-nombre.PNG',
             text: "Gauss aurait sortie la formule okl quand son prof l'a punis en lui demandant de calculer la somme des premiers nombres de 1 à 100"
         },
         {
             name: 'Equilibre de Nash',
-            date: 1700,
+            date: '1700',
             img: '../maths/nash.PNG',
             text: "En théorie des jeux, un équilibre de Nash est une situation où : 1/ Chaque joueur prévoit correctement le choix des autres, 2/ Chaque joueur maximise son gain, compte tenu de cette prévision."
         },
@@ -1934,12 +1934,151 @@ export class Catalog {
                 }]
         }
     ]
+
+    public static frenchCities: LightTimeLineElement[] = [
+        { name: "Angers", img: "../geographie/villes/Angers.jpg" },
+        { name: "Bordeaux", img: "../geographie/villes/Bordeaux.jpg" },
+        { name: "Clermont-Ferrand", img: "../geographie/villes/Clermont-Ferrand.jpg" },
+        { name: "Dijon", img: "../geographie/villes/Dijon.jpg" },
+        { name: "Grenoble", img: "../geographie/villes/Grenoble.jpg" },
+        { name: "La Rochelle", img: "../geographie/villes/la-rochelle.jpg" },
+        { name: "Le Havre", img: "../geographie/villes/Le-Havre.jpg" },
+        { name: "Le Mans", img: "../geographie/villes/Le-Mans.jpg" },
+        { name: "Lille", img: "../geographie/villes/Lille.jpg" },
+        { name: "Lyon", img: "../geographie/villes/Lyon.jpg" },
+        { name: "Marseille", img: "../geographie/villes/marseille.jpg" },
+        { name: "Montpellier", img: "../geographie/villes/Montpellier.jpg" },
+        { name: "Nantes", img: "../geographie/villes/Nantes.jpg" },
+        { name: "Nice", img: "../geographie/villes/Nice.jpg" },
+        { name: "Nimes", img: "../geographie/villes/Nimes.jpg" },
+        { name: "Paris", img: "../geographie/villes/Paris.jpg" },
+        { name: "Reims", img: "../geographie/villes/Reims.jpg" },
+        { name: "Rennes", img: "../geographie/villes/Rennes.jpg" },
+        { name: "Saint-Etienne", img: "../geographie/villes/Saint-Etienne.jpg" },
+        { name: "Strasbourg", img: "../geographie/villes/Strasbourg.jpg" },
+        { name: "Toulon", img: "../geographie/villes/Toulon.jpg" },
+        { name: "Toulouse", img: "../geographie/villes/Toulouse.jpg" },
+        { name: "Tours", img: "../geographie/villes/Tours.jpg" }
+    ]
+
+    public static frenchRegions: LightTimeLineElement[] = [
+        { name: "Auvergne Rhone-Alpes", img: "../geographie/regions/Auvergne-Rhone-Alpes.png" },
+        { name: "Bourgogne Franche-Comté", img: "../geographie/regions/Bourgogne-Franche-Comte.png" },
+        { name: "Bretagne", img: "../geographie/regions/bretagne.png" },
+        { name: "Centre-Val de Loire", img: "../geographie/regions/Centre-Val_de_Loire.png" },
+        { name: "Grand-Est", img: "../geographie/regions/Grand-Est.png" },
+        { name: "Hauts de France", img: "../geographie/regions/Hauts-de-France.png" },
+        { name: "Île-de-France", img: "../geographie/regions/Ile-de-France.svg" },
+        { name: "Normandie", img: "../geographie/regions/normandie.svg" },
+        { name: "Nouvelle Aquitaine", img: "../geographie/regions/Nouvelle-Aquitaine.png" },
+        { name: "Occitanie", img: "../geographie/regions/Occitanie.png" },
+        { name: "Pays de la Loire", img: "../geographie/regions/Pays_de_la_Loire.png" },
+        { name: "Provence-Alpes Côte d'Azur", img: "../geographie/regions/Provence-Alpes-Cote_d_Azur.png" }
+    ]
+
+    public static rivers: LightTimeLineElement[] = [
+        { name: "La Charente", img: "../geographie/fleuves/charente.png" },
+        { name: "La Dordogne", img: "../geographie/fleuves/dordogne.png" },
+        { name: "La Garonne", img: "../geographie/fleuves/garonne.png" },
+        { name: "La Loire", img: "../geographie/fleuves/loire.png" },
+        { name: "Le Lot", img: "../geographie/fleuves/Lot.png" },
+        { name: "La Marne", img: "../geographie/fleuves/marne.png" },
+        { name: "La Meuse", img: "../geographie/fleuves/meuse.png" },
+        { name: "La Moselle", img: "../geographie/fleuves/moselle.png" },
+        { name: "Le Rhin", img: "../geographie/fleuves/rhin.png" },
+        { name: "Le Rhone", img: "../geographie/fleuves/rhone.png" },
+        { name: "La Seine", img: "../geographie/fleuves/seine.png" }
+
+    ]
+
+    public static frenchDepartements: LightTimeLineElement[] = [
+        { name: "Ain", img: "../geographie/departements/Ain.png" },
+        { name: "Aisne", img: "../geographie/departements/Aisne.png" },
+        { name: "Allier", img: "../geographie/departements/Allier.png" },
+        { name: "Alpes-de-Haute-Provence", img: "../geographie/departements/Alpes-de-Haute-Provence.png" },
+        { name: "Ardèche", img: "../geographie/departements/Ardèche.png" },
+        { name: "Ardennes", img: "../geographie/departements/Ardennes.png" },
+        { name: "Ariège", img: "../geographie/departements/Ariège.png" },
+        { name: "Aube", img: "../geographie/departements/Aube.png" },
+        { name: "Aude", img: "../geographie/departements/Aude.png" },
+        { name: "Aveyron", img: "../geographie/departements/Aveyron.png" },
+        { name: "Bas-Rhin", img: "../geographie/departements/Bas-Rhin.png" },
+        { name: "Bouches-du-Rhône", img: "../geographie/departements/Bouches-du-Rhône.png" },
+        { name: "Calvados", img: "../geographie/departements/Calvados.png" },
+        { name: "Cantal", img: "../geographie/departements/Cantal.png" },
+        { name: "Charente", img: "../geographie/departements/Charente.png" },
+        { name: "Charente-Maritime", img: "../geographie/departements/Charente-Maritime.png" },
+        { name: "Cher", img: "../geographie/departements/Cher.png" },
+        { name: "Corrèze", img: "../geographie/departements/Corrèze.png" },
+        { name: "Corse", img: "../geographie/departements/Corse.png" },
+        { name: "Côte d'Or", img: "../geographie/departements/Cote-d-Or.png" },
+        { name: "Côtes d'Armor", img: "../geographie/departements/Cotes-d-Armor.png" },
+        { name: "Creuse", img: "../geographie/departements/Creuse.png" },
+        { name: "Deux Sèvres", img: "../geographie/departements/Deux-Sèvres.png" },
+        { name: "Dordogne", img: "../geographie/departements/Dordogne.png" },
+        { name: "Doubs", img: "../geographie/departements/Doubs.png" },
+        { name: "Drome", img: "../geographie/departements/Drome.png" },
+        { name: "Eure", img: "../geographie/departements/Eure.png" },
+        { name: "Eure-et-Loir", img: "../geographie/departements/Eure-et-Loir.png" },
+        { name: "Finistère", img: "../geographie/departements/Finistère.png" },
+        { name: "Gard", img: "../geographie/departements/Gard.png" },
+        { name: "Gers", img: "../geographie/departements/Gers.png" },
+        { name: "Gironde", img: "../geographie/departements/Gironde.png" },
+        { name: "Haute-Garonne", img: "../geographie/departements/Haute-Garonne.png" },
+        { name: "Haute-Loire", img: "../geographie/departements/Haute-Loire.png" },
+        { name: "Haute-Marne", img: "../geographie/departements/Haute-Marne.png" },
+        { name: "Hautes-Alpes", img: "../geographie/departements/Hautes-Alpes.png" },
+        { name: "Haute-Saône", img: "../geographie/departements/Haute-Saône.png" },
+        { name: "Hautes-Pyrénées", img: "../geographie/departements/Hautes-Pyrenees.png" },
+        { name: "Haute-Vienne", img: "../geographie/departements/Haute-Vienne.png" },
+        { name: "Haut-Rhin", img: "../geographie/departements/Haut-Rhin.png" },
+        { name: "Hérault", img: "../geographie/departements/Hérault.png" },
+        { name: "Ille-et-Vilaine", img: "../geographie/departements/Ille-et-Vilaine.png" },
+        { name: "Indre", img: "../geographie/departements/Indre.png" },
+        { name: "Indre-et-Loire (ou Touraine)", img: "../geographie/departements/Indre-et-Loire-ou-Touraine.png" },
+        { name: "Isère", img: "../geographie/departements/Isère.png" },
+        { name: "Jura", img: "../geographie/departements/Jura.png" },
+        { name: "Landes", img: "../geographie/departements/Landes.png" },
+        { name: "Loire", img: "../geographie/departements/Loire.png" },
+        { name: "Loire-Atlantique", img: "../geographie/departements/Loire-Atlantique.png" },
+        { name: "Loiret", img: "../geographie/departements/Loiret.png" },
+        { name: "Loir-et-Cher", img: "../geographie/departements/Loir-et-Cher.png" },
+        { name: "Lot", img: "../geographie/departements/Lot.png" },
+        { name: "Lot-et-Garonne", img: "../geographie/departements/Lot-et-Garonne.png" },
+        { name: "Lozère", img: "../geographie/departements/Lozere.png" },
+        { name: "Maine-et-Loire", img: "../geographie/departements/Maine-et-Loire.png" },
+        { name: "Manche", img: "../geographie/departements/Manche.png" },
+        { name: "Marne", img: "../geographie/departements/Marne.png" },
+        { name: "Mayenne", img: "../geographie/departements/Mayenne.png" },
+        { name: "Meuse", img: "../geographie/departements/Meuse.png" },
+        { name: "Morbihan", img: "../geographie/departements/Morbihan.png" },
+        { name: "Moselle", img: "../geographie/departements/Moselle.png" },
+        { name: "Nièvre", img: "../geographie/departements/Nièvre.png" },
+        { name: "Nord", img: "../geographie/departements/Nord.png" },
+        { name: "Oise", img: "../geographie/departements/Oise.png" },
+        { name: "Orne", img: "../geographie/departements/Orne.png" },
+        { name: "Pas-de-Calais", img: "../geographie/departements/Pas-de-Calais.png" },
+        { name: "Puy-de-Dôme", img: "../geographie/departements/Puy-de-Dôme.png" },
+        { name: "Pyrenees-Atlantiques", img: "../geographie/departements/Pyrenees-Atlantiques.png" },
+        { name: "Pyrenees-Orientales", img: "../geographie/departements/Pyrenees-Orientales-.png" },
+        { name: "Saône-et-Loire", img: "../geographie/departements/Saône-et-Loire.png" },
+        { name: "Sarthe", img: "../geographie/departements/Sarthe.png" },
+        { name: "Seine-et-Marne", img: "../geographie/departements/Seine-et-Marne.png" },
+        { name: "Seine-Maritime", img: "../geographie/departements/Seine-Maritime.png" },
+        { name: "Somme", img: "../geographie/departements/Somme.png" },
+        { name: "Tarn", img: "../geographie/departements/Tarn.png" },
+        { name: "Var", img: "../geographie/departements/Var.png" },
+        { name: "Vendée", img: "../geographie/departements/Vendée.png" },
+        { name: "Vienne", img: "../geographie/departements/Vienne.png" },
+        { name: "Vosges", img: "../geographie/departements/Vosges.png" },
+        { name: "Yonne", img: "../geographie/departements/Yonne.png" },
+    ]
 }
 
-export type MathsFormula = {
+export type LightTimeLineElement = {
     name: string,
-    date: number,
-    img?: string,
+    date?: string,
+    img: string,
     text?: string
 }
 

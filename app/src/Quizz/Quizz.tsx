@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
-import { Artist, Work } from '../Catalog';
 import 'react-vertical-timeline-component/style.min.css';
-import { QuizzItem } from './QuizzItem';
+import { QuizzItem, QuizzItemWork } from './QuizzItem';
 
 import './Quizz.scss';
 
-export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
+export interface ArtistQuizz {
+  artist?: string,
+  img?: string,
+  works: QuizzItemWork[]
+}
+
+export const Quizz: React.FC<{ artists: ArtistQuizz[] }> = ({ artists }) => {
   let [reveal, setReveal] = React.useState(false);
-  let [work, setWork] = React.useState<Work>();
-  let [artist, setArtist] = React.useState<Artist>();
+  let [work, setWork] = React.useState<QuizzItemWork>();
+  let [artist, setArtist] = React.useState<ArtistQuizz>();
 
   function setRandomWork() {
     setReveal(false);
@@ -34,18 +39,10 @@ export const Quizz: React.FC<{ artists : Artist[] }> = ({ artists }) => {
       </div>
       <div className='quizz-work'>
         {work !== undefined && artist !== undefined ?
-          <QuizzItem work={work} artist={artist} reveal={reveal}></QuizzItem>
+          <QuizzItem work={work} artistName={artist.artist} reveal={reveal}></QuizzItem>
           : null
         }
       </div>
     </div>
   );
 }
-
-/*
-{work.img ? <img src={work.img} alt=""/> : null }
-      {reveal ?
-        <div>{work.name} - {work.date}</div>
-        : null
-      }
-*/

@@ -17,6 +17,10 @@ import Writers from './Writers/Writers';
 import SocioPolitique from './SocioPolitique/SocioPolitique';
 import Economy from './Economy/Economy';
 import History from './History/History';
+import Departements from './Geographie/Departements/Departements';
+import Villes from './Geographie/Villes/Villes';
+import Regions from './Geographie/Regions/Regions';
+import Fleuves from './Geographie/Fleuves/Fleuves';
 
 const loadCreations = () => import('./Creations/Creations');
 const loadPainters = () => import('./Painting/Painters');
@@ -32,7 +36,7 @@ const App: React.FC = () => {
   const [showPrivateMenus, setShowPrivateMenus] = useState(false);
   const [scrollRatio, setScrollRatio] = useState(0);
   const [hideOnScroll, setHideOnScroll] = useState(false);
-  const [prevPosition, setPrevPosition] = useState<{x: number, y: number}>({ x: 0, y: 0 })
+  const [prevPosition, setPrevPosition] = useState<{ x: number, y: number }>({ x: 0, y: 0 })
 
   useEffect(() => {
     // preload other pages
@@ -72,19 +76,23 @@ const App: React.FC = () => {
             <ul>
               <NavItem exact to="/">Home</NavItem>
               <NavItem exact to="/creations">Creations</NavItem>
-              { showPrivateMenus ? <NavItem exact to="/painters">Painters</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/photographers">Photographers</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/filmmakers">FilmMakers</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/maths">Maths</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/writers">Writers</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/socio-politique">Socio-Politique</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/history">History</NavItem> : null }
-              { showPrivateMenus ? <NavItem exact to="/economy">Economy</NavItem> : null }
+              {showPrivateMenus ? <NavItem exact to="/painters">Painters</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/photographers">Photographers</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/filmmakers">FilmMakers</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/maths">Maths</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/writers">Writers</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/socio-politique">Socio-Politique</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/history">History</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/economy">Economy</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/villes">Villes</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/departements">Départements</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/regions">Régions</NavItem> : null}
+              {showPrivateMenus ? <NavItem exact to="/fleuves">Fleuves</NavItem> : null}
             </ul>
           </nav>
         </div>
 
-        <div className={'scroll-indicator-wrapper ' + (scrollRatio < 0.03 ? 'hidden': '')}>
+        <div className={'scroll-indicator-wrapper ' + (scrollRatio < 0.03 ? 'hidden' : '')}>
           <ScrollIndicator scrollRatio={scrollRatio}></ScrollIndicator>
         </div>
 
@@ -92,7 +100,7 @@ const App: React.FC = () => {
           <AnimatedSwitch
             atEnter={{ translateX: 100 }}
             atLeave={{ translateX: -100 }}
-            atActive={{ translateX: 0}}
+            atActive={{ translateX: 0 }}
             mapStyles={(styles: any) => ({
               transform: `translateX(${styles.translateX}%)`,
               overflowY: styles.translateX !== 0 ? 'hidden' : 'initial'
@@ -101,14 +109,18 @@ const App: React.FC = () => {
           >
             <Route path="/creations" component={Creations} />
             <Route path="/painters" component={Painters} />
-            <Route path="/photographers" component={Photographers}/>
-            <Route path="/filmmakers" component={FilmMakers}/>
-            <Route path="/quizz/:category" component={QuizzPage}/>
+            <Route path="/photographers" component={Photographers} />
+            <Route path="/filmmakers" component={FilmMakers} />
+            <Route path="/quizz/:category" component={QuizzPage} />
             <Route path="/maths" component={Maths} />
             <Route path="/writers" component={Writers} />
             <Route path="/socio-politique" component={SocioPolitique} />
             <Route path="/economy" component={Economy} />
             <Route path="/history" component={History} />
+            <Route path="/villes" component={Villes} />
+            <Route path="/regions" component={Regions} />
+            <Route path="/fleuves" component={Fleuves} />
+            <Route path="/departements" component={Departements} />
             <Route path="/">
               <Home setShowPrivateMenus={setShowPrivateMenus}></Home>
             </Route>
@@ -120,14 +132,14 @@ const App: React.FC = () => {
   );
 }
 
-function NavItem({children, to, exact}: {children: any, to: string, exact: boolean}) {
+function NavItem({ children, to, exact }: { children: any, to: string, exact: boolean }) {
   return (
-      <Route path={to} exact={exact} children={({match}) => (
-          <li className={match ? "selected" : undefined}>
-              <Link to={to}
-              >{children}</Link>
-          </li>
-      )}/>
+    <Route path={to} exact={exact} children={({ match }) => (
+      <li className={match ? "selected" : undefined}>
+        <Link to={to}
+        >{children}</Link>
+      </li>
+    )} />
   )
 }
 

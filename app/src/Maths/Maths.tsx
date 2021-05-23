@@ -1,13 +1,12 @@
 import React from 'react';
 import { Catalog } from '../Catalog';
 import 'react-vertical-timeline-component/style.min.css';
-import { MathsTimeLine } from '../MathsTimeLine/MathsTimeLine';
+import { LightTimeLine } from '../LightTimeLine/LightTimeLine';
 
 type Props = {}
 
 export default function Maths(props: Props) {
   // Sort by birth
-  Catalog.formulas.sort((x, y) => x.date - y.date)
   return (
     <div>
       <header className="app-header">
@@ -16,7 +15,7 @@ export default function Maths(props: Props) {
         </p>
 
       </header>
-      <MathsTimeLine formulas={Catalog.formulas}></MathsTimeLine>
+      <LightTimeLine elements={Catalog.formulas}></LightTimeLine>
     </div>
   );
 }

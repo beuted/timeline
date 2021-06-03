@@ -959,6 +959,39 @@ export class Catalog {
                 },
             ]
         },
+        {
+            artist: "Joseph Mallord William Turner",
+            lifePeriod: {
+                start: 1775,
+                end: 1851
+            },
+            img: "../painters/William-Turner.jpg",
+            description: "Initialement de la veine romantique anglaise, son œuvre est marquée par une recherche novatrice audacieuse qui le fait considérer, avec son contemporain John Constable, comme un précurseur de l'impressionnisme.",
+            works: [
+                {
+                    name: "Le negrier",
+                    img: "../painters/william-turner/le-negrier.jpg",
+                    date: "1840"
+                },
+                {
+                    name: "Plage calais à marée basse",
+                    img: "../painters/william-turner/plage-calais-a-maree-basse.jpg",
+                    date: "1830"
+                },
+                {
+                    name: "Pluie, vapeur et vitesse",
+                    img: "../painters/william-turner/pluie-vapeur-et-vitesse.jpg",
+                    date: "1844"
+                },
+                {
+                    name: "La 5e plaie d'égypte",
+                    img: "../painters/william-turner/la-cinquieme-plaie-d-egypte.jpg",
+                    date: "1800"
+                },
+
+            ]
+        },
+
     ]
 
     public static photographers: Artist[] = [

@@ -996,7 +996,7 @@ export class Catalog {
 
     public static photographers: Artist[] = [
         {
-            artist: "Les frère becher",
+            artist: "Le couple becher",
             lifePeriod: {
                 start: 1931,
                 end: 2007
@@ -1473,6 +1473,27 @@ export class Catalog {
             ]
         },
         {
+            artist: 'Ridley Scott',
+            lifePeriod: {
+                start: 1937,
+                end: null
+            },
+            img: "../filmmakers/Ridley-Scott.jpg",
+            description: "",
+            works: [
+                {
+                    name: "Alien",
+                    img: "../filmmakers/ridley-scott/alien.jpg",
+                    date: "1979"
+                },
+                {
+                    name: "Blade Runner",
+                    img: "../filmmakers/ridley-scott/blade_runner.jpg",
+                    date: "1982"
+                },
+            ]
+        },
+        {
             artist: "David Fincher",
             lifePeriod: {
                 start: 1962,
@@ -1481,11 +1502,6 @@ export class Catalog {
             img: "../filmmakers/fincher.jpg",
             description: "",
             works: [
-                {
-                    name: "Alien",
-                    img: "../filmmakers/fincher/alien.jpg",
-                    date: "1992"
-                },
                 {
                     name: "Seven",
                     img: "../filmmakers/fincher/seven.png",

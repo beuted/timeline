@@ -34,6 +34,7 @@ const FilmMakers = waitLoaded(React.lazy(loadFilmMakers));
 const App: React.FC = () => {
 
   const [showPrivateMenus, setShowPrivateMenus] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [scrollRatio, setScrollRatio] = useState(0);
   const [hideOnScroll, setHideOnScroll] = useState(false);
   const [prevPosition, setPrevPosition] = useState<{ x: number, y: number }>({ x: 0, y: 0 })
@@ -70,9 +71,10 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <div className={"hamburger-button" + (showMobileMenu ? ' active' : '')} onClick={() => {setShowMobileMenu(!showMobileMenu)}}>|||</div>
       <BrowserRouter>
-        <div className={'navigation-wrapper ' + (hideOnScroll ? 'hidden' : '')}>
-          <nav className="navigation">
+        <div className={'navigation-wrapper small' + (hideOnScroll ? ' hidden' : '') + (showMobileMenu ? "" : " hidden-mobile")}>
+          <nav className={"navigation small"} >
             <ul>
               <NavItem exact to="/">Home</NavItem>
               <NavItem exact to="/creations">Creations</NavItem>

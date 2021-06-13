@@ -23,6 +23,26 @@ a {
   color: #fff;
 }
 
+.hamburger-button {
+  position: fixed;
+  color: white;
+  margin: 20px 0 0 23px;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger-button {
+    z-index: 1001;
+    display: inherit;
+    transform: rotate(90deg);
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  .hamburger-button.active {
+    transform: rotate(180deg);
+  }
+}
+
 .navigation-wrapper {
   top: -0;
   right: 0;
@@ -37,6 +57,17 @@ a {
   top: -80px;
 }
 
+@media only screen and (max-width: 768px) {
+  .navigation-wrapper {
+    background-image: none;
+    pointer-events: none;
+  }
+
+  .navigation-wrapper.hidden {
+    top: -0;
+  }
+}
+
 .navigation {
   right: 0;
   padding: 1rem 0;
@@ -44,10 +75,30 @@ a {
   float: right;
 }
 
+@media only screen and (max-width: 768px) {
+  .navigation {
+    float: left;
+    margin-top: 40px;
+    margin-left: 0;
+    transition: margin 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  .navigation-wrapper.hidden-mobile .navigation {
+    margin-left: -150px;
+  }
+}
+
 .navigation>ul {
   margin: 0 1.5rem 0 0;
   padding: 0;
   list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation.small>ul{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .navigation>ul>li {
@@ -58,6 +109,7 @@ a {
   display: inline-block;
   margin: 0 1.5rem;
   font-size: calc(10px + 0.7vw);
+  pointer-events: auto;
 
   &::before {
     transition-property: width;

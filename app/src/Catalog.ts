@@ -50,6 +50,33 @@ export class Catalog {
             ]
         },
         {
+            artist: "Georges Braque",
+            lifePeriod: {
+                start: 1882,
+                end: 1963
+            },
+            img: "../painters/braque.jpg",
+            description: "Peintre, sculpteur et graveur français. Developpe le cubisme en 1907 avec Picasso. Il est chiant il a eut mille styles",
+            works: [
+                {
+                    name: "Man with a guitare",
+                    img: "../painters/braque/man-with-a-guitare.jpg",
+                    date: "1911"
+                },
+                {
+                    name: "Maisons à l'Estaque",
+                    img: "../painters/braque/Houses-At-L_estaque.jpg",
+                    date: "1908"
+                },
+                {
+                    name: "Boats on the beach at l'Estaque",
+                    img: "../painters/braque/boat-on-the-beach-at-l-estaque.jpg",
+                    date: "1906"
+                }
+
+            ]
+        },
+        {
             artist: "Salvador Dali",
             lifePeriod: {
                 start: 1904,
@@ -78,7 +105,11 @@ export class Catalog {
                     img: "../painters/dali/les-elephants.jpg",
                     date: "1948"
                 },
-
+                {
+                    name: "Madonna",
+                    img: "../painters/dali/madonna.jpg",
+                    date: "1958"
+                },
             ]
 
         },
@@ -170,6 +201,16 @@ export class Catalog {
                     img: "../painters/monet/Claude_Monet-Waterlilies.jpg",
                     date: "1899"
                 },
+                {
+                    name: "Ice Floes",
+                    img: "../painters/monet/ice-floes.jpg",
+                    date: "1893"
+                },
+                {
+                    name: "Les Coquelicots",
+                    img: "../painters/monet/les-coquelicots.jpg",
+                    date: "1873"
+                },
             ]
         },
         {
@@ -228,6 +269,17 @@ export class Catalog {
                     img: "../painters/klee/1024px-Paul_Klee_-_Ad_Parnassum.jpg",
                     date: "1932",
                 },
+                {
+                    name: "Monuments at g",
+                    img: "../painters/klee/monuments-at-g.jpg",
+                    date: "1929",
+                },
+                {
+                    name: "May picture",
+                    img: "../painters/klee/may-picture.jpg",
+                    date: "1925",
+                },
+
 
             ]
         },
@@ -373,6 +425,11 @@ export class Catalog {
                     img: "../painters/klimt/Gustav_Klimt_039.jpg",
                     date: "1901"
                 },
+                {
+                    name: "L'espoir II",
+                    img: "../painters/klimt/l-espoir-2.jpg",
+                    date: "1907"
+                },
             ]
         },
         {
@@ -394,6 +451,12 @@ export class Catalog {
                     img: "../painters/renoir/Le_Déjeuner_des_canotiers.jpg",
                     date: "1881"
                 },
+                {
+                    name: "In the Meadow",
+                    img: "../painters/renoir/in-the-meadow.jpg",
+                    date: "1888"
+                },
+
             ]
         },
         {
@@ -553,6 +616,11 @@ export class Catalog {
                     name: "Une baignade à Asnières",
                     img: "../painters/seurat/baignde-a-asnieres.jpg",
                     date: "1884"
+                },
+                {
+                    name: "Temps gris, Grande Jatte",
+                    img: "../painters/seurat/grey-weather-grande-jatte.jpg",
+                    date: "1886"
                 }
             ]
         },
@@ -580,6 +648,17 @@ export class Catalog {
                     img: "../painters/juan-gris/Le_Canigou_Juan_Gris.jpeg",
                     date: "1921"
                 },
+                {
+                    name: "Violin and Playing Cards on a Table",
+                    img: "../painters/juan-gris/Violin-and-Playing-Cards-on-a-Table.jpg",
+                    date: "1913"
+                },
+                {
+                    name: "Still life with checked tablecloth",
+                    img: "../painters/juan-gris/still-life-with-checked-tablecloth.jpg",
+                    date: "1915"
+                },
+
             ]
         },
         {
@@ -773,6 +852,11 @@ export class Catalog {
                     name: "The Offertory at Calvary",
                     img: "../painters/maurice-denis/calvary.jpg",
                     date: "1890"
+                },
+                {
+                    name: "Springtime",
+                    img: "../painters/maurice-denis/springtime.jpg",
+                    date: "1894"
                 }
             ]
         },
@@ -799,6 +883,11 @@ export class Catalog {
                     name: "La Petite Danseuse de quatorze ans",
                     img: "../painters/degas/la-petite-danseuse.jpg",
                     date: "1881"
+                },
+                {
+                    name: "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinçon)",
+                    img: "../painters/degas/a-woman-sit-beside.jpg",
+                    date: "1865"
                 }
             ]
         },
@@ -1910,6 +1999,55 @@ export class Catalog {
                     date: "1987"
                 },
             ]
+        },
+        {
+            artist: "René Magritte",
+            lifePeriod: {
+                start: 1898,
+                end: 1967
+            },
+            img: "../painters/magritte.jpeg",
+            description: "Peintre surréaliste belge.",
+            works: [
+                {
+                    name: "L'Assassin menacé",
+                    img: "../painters/magritte/l-assassin-manace.jpg",
+                    date: "1927"
+                },
+                {
+                    name: "La Trahison des images",
+                    img: "../painters/magritte/la-trahison-des-images.jpg",
+                    date: "1929"
+                },
+                {
+                    name: "Le fils de l'homme",
+                    img: "../painters/magritte/le-fils-de l-homme.jpg",
+                    date: "1964"
+                }
+            ]
+
+        },
+        {
+            artist: "Fernand Léger",
+            lifePeriod: {
+                start: 1881,
+                end: 1995
+            },
+            img: "../painters/leger.jpg",
+            description: "Peintre français, aussi créateur de cartons de tapisseries et de vitraux, décorateur, céramiste, sculpteur, dessinateur et illustrateur. Il a été l’un des premiers à exposer publiquement des travaux d’orientation cubiste, même si on a parfois qualifié son style de « tubiste ».",
+            works: [
+                {
+                    name: "Les plongeurs",
+                    img: "../painters/magritte/les-plongeurs.jpg",
+                    date: "1943"
+                },
+                {
+                    name: "Les loisirs sur fond rouge",
+                    img: "../painters/magritte/Les-loisirs-sur-fond-rouge.webp",
+                    date: "1949"
+                },
+            ]
+
         },
     ]
 

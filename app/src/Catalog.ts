@@ -1001,6 +1001,11 @@ export class Catalog {
           img: "../painters/bonnard/apres-le-bain.jpg",
           date: "1910",
         },
+        {
+          name: "La salle à manger à la campagne",
+          img: "../painters/bonnard/la-salle-a-manger-a-la-campagne.jpg",
+          date: "1913",
+        },
       ],
     },
     {
@@ -1017,6 +1022,11 @@ export class Catalog {
           name: "Three men walking II",
           img: "../painters/giacometti/three-men-walking-II.jpg",
           date: "1949",
+        },
+        {
+          name: "L'homme au doigt",
+          img: "../painters/giacometti/l-homme-au-doigt.jpg",
+          date: "1947",
         },
       ],
     },

@@ -1153,6 +1153,130 @@ export class Catalog {
         },
       ],
     },
+    {
+      artist: "René Magritte",
+      lifePeriod: {
+        start: 1898,
+        end: 1967,
+      },
+      img: "../painters/magritte.jpeg",
+      description: "Peintre surréaliste belge.",
+      works: [
+        {
+          name: "L'Assassin menacé",
+          img: "../painters/magritte/l-assassin-manace.jpg",
+          date: "1927",
+        },
+        {
+          name: "La Trahison des images",
+          img: "../painters/magritte/la-trahison-des-images.jpg",
+          date: "1929",
+        },
+        {
+          name: "Le fils de l'homme",
+          img: "../painters/magritte/le-fils-de l-homme.jpg",
+          date: "1964",
+        },
+      ],
+    },
+    {
+      artist: "Fernand Léger",
+      lifePeriod: {
+        start: 1881,
+        end: 1995,
+      },
+      img: "../painters/leger.jpg",
+      description:
+        "Peintre français, aussi créateur de cartons de tapisseries et de vitraux, décorateur, céramiste, sculpteur, dessinateur et illustrateur. Il a été l’un des premiers à exposer publiquement des travaux d’orientation cubiste, même si on a parfois qualifié son style de « tubiste ».",
+      works: [
+        {
+          name: "Femme avec un chat",
+          img: "../painters/leger/femme-avec-un-chat.jpg",
+          date: "1921",
+        },
+        {
+          name: "Les plongeurs",
+          img: "../painters/leger/les-plongeurs.jpg",
+          date: "1943",
+        },
+        {
+          name: "Les plongeurs bleu et noir",
+          img: "../painters/leger/plongeurs-bleu-et-noir.jpg",
+          date: "1943",
+        },
+        {
+          name: "Les loisirs sur fond rouge",
+          img: "../painters/leger/Les-loisirs-sur-fond-rouge.webp",
+          date: "1949",
+        },
+      ],
+    },
+    {
+      artist: "Jean-Auguste-Dominique Ingres",
+      lifePeriod: {
+        start: 1780,
+        end: 1867,
+      },
+      img: "../painters/ingres.jpg",
+      description:
+        "Peintre français, champion de la doctrine du beau et de la primauté du dessin sur la couleur, en opposition successive aux courants romantiques et réalistes",
+      works: [
+        {
+          name: "Napoléon Ier sur le trône impérial",
+          img: "../painters/ingres/napoleone_I_sul_trono_imperiale.jpg",
+          date: "1806",
+        },
+        {
+          name: "La grande odalisque",
+          img: "../painters/ingres/La_Grande_Odalisque.jpg",
+          date: "1814",
+        },
+        {
+          name: "La Vicomtesse d'Haussonville",
+          img: "../painters/ingres/Louise_de_Broglie_by_Jean_Auguste_Dominique_Ingres.jpg",
+          date: "1845",
+        },
+      ],
+    },
+    {
+      artist: "Alphonse Mucha",
+      lifePeriod: {
+        start: 1860,
+        end: 1939,
+      },
+      img: "../painters/mucha.jpg",
+      description:
+        "Affichiste, illustrateur, graphiste, peintre, et professeur d'art tchécoslovaque.",
+      works: [
+        {
+          name: "Job",
+          img: "../painters/mucha/job.jpg",
+          date: "1896",
+        },
+        {
+          name: "Daydream",
+          img: "../painters/mucha/daydream.jpg",
+          date: "1897",
+        }
+      ],
+    },
+    {
+      artist: "Théodore Géricault",
+      lifePeriod: {
+        start: 1791,
+        end: 1824,
+      },
+      img: "../painters/gericault.jpg",
+      description:
+        "Peintre, sculpteur, dessinateur et lithographe français. Incarnation de l’artiste romantique, il a eu une vie courte et tourmentée, qui a donné naissance à de nombreux mythes",
+      works: [
+        {
+          name: "Le Radeau de La Méduse",
+          img: "../painters/gericault/le-radeau-de-la-meduse.jpg",
+          date: "1818",
+        }
+      ],
+    },
   ];
 
   public static photographers: Artist[] = [
@@ -1781,6 +1905,32 @@ export class Catalog {
         },
       ],
     },
+    {
+      artist: "Paul Thomas Anderson",
+      lifePeriod: {
+        start: 1970,
+        end: null,
+      },
+      img: "../filmmakers/Paul_Thomas_Anderson.jpg",
+      description: "",
+      works: [
+        {
+          name: "Licorice Pizza",
+          img: "../filmmakers/pt-anderson/licorice-pizza.jpg",
+          date: "2021",
+        },
+        {
+          name: "There will be blood",
+          img: "../filmmakers/pt-anderson/there-will-be-blood.jpg",
+          date: "2007",
+        },
+        {
+          name: "The Master",
+          img: "../filmmakers/pt-anderson/the-master.jpg",
+          date: "2012",
+        },
+      ],
+    },
   ];
 
   public static writers: Artist[] = [
@@ -1837,7 +1987,7 @@ export class Catalog {
         },
         {
           name: "Le grand secret",
-          img: "../writers/Le_Grand_Secret.gif",
+          img: "../writers/le-grand-secret.jpg",
           date: "1973",
         },
       ],
@@ -1880,7 +2030,7 @@ export class Catalog {
         start: 1947,
         end: null,
       },
-      img: "../writers/Stephen_King.webp",
+      img: "../writers/Stephen_King.jpg",
       description: "",
       works: [
         {
@@ -1912,7 +2062,7 @@ export class Catalog {
         start: 1948,
         end: null,
       },
-      img: "../writers/AVT_Dan-Simmons_299.jpeg",
+      img: "../writers/AVT_Dan-Simmons_299.jpg",
       description: "",
       works: [
         {
@@ -1977,7 +2127,7 @@ export class Catalog {
         start: 1911,
         end: 1993,
       },
-      img: "../writers/Lemaitre_Pierre.png",
+      img: "../writers/William_Golding_1983.jpg",
       description: "",
       works: [
         {
@@ -1998,24 +2148,8 @@ export class Catalog {
       works: [
         {
           name: "Le viel homme et la mer",
-          img: "../writers/samajestedesmouches.jpg",
+          img: "../writers/Le-vieil-homme-et-la-mer.jpg",
           date: "1952",
-        },
-      ],
-    },
-    {
-      artist: "Milan Kundera",
-      lifePeriod: {
-        start: 1929,
-        end: 1981,
-      },
-      img: "../writers/kundera.jpg",
-      description: "",
-      works: [
-        {
-          name: "L'Insoutenable Légèreté de l'être",
-          img: "../writers/L_Insoutenable_Legerete_de_l_etre.jpg",
-          date: "1984",
         },
       ],
     },
@@ -2049,6 +2183,11 @@ export class Catalog {
           img: "../writers/Le-comte-de-monte-cristo.jpg",
           date: "1844",
         },
+        {
+          name: "Les trois mousquetaires",
+          img: "../writers/3musketeers.jpg",
+          date: "1844",
+        },
       ],
     },
     {
@@ -2068,60 +2207,138 @@ export class Catalog {
       ],
     },
     {
-      artist: "René Magritte",
+      artist: "Victor Hugo",
       lifePeriod: {
-        start: 1898,
-        end: 1967,
+        start: 1802,
+        end: 1885,
       },
-      img: "../painters/magritte.jpeg",
-      description: "Peintre surréaliste belge.",
+      img: "../writers/victor-hugo.jpg",
+      description: "",
       works: [
         {
-          name: "L'Assassin menacé",
-          img: "../painters/magritte/l-assassin-manace.jpg",
-          date: "1927",
+          name: "Les misérables",
+          img: "../writers/les-misérables.jpg",
+          date: "1862",
         },
         {
-          name: "La Trahison des images",
-          img: "../painters/magritte/la-trahison-des-images.jpg",
-          date: "1929",
-        },
-        {
-          name: "Le fils de l'homme",
-          img: "../painters/magritte/le-fils-de l-homme.jpg",
-          date: "1964",
+          name: "Notre Dame de paris",
+          img: "../writers/notre_dame_de_paris.jpg",
+          date: "1831",
         },
       ],
     },
     {
-      artist: "Fernand Léger",
+      artist: "Honoré de Balzac",
       lifePeriod: {
-        start: 1881,
-        end: 1995,
+        start: 1799,
+        end: 1850,
       },
-      img: "../painters/leger.jpg",
-      description:
-        "Peintre français, aussi créateur de cartons de tapisseries et de vitraux, décorateur, céramiste, sculpteur, dessinateur et illustrateur. Il a été l’un des premiers à exposer publiquement des travaux d’orientation cubiste, même si on a parfois qualifié son style de « tubiste ».",
+      img: "../writers/balzac.jpg",
+      description: "Auteur des Rougon-Macquart",
       works: [
         {
-          name: "Femme avec un chat",
-          img: "../painters/magritte/femme-avec-un-chat.jpg",
-          date: "1921",
+          name: "Le Père Goriot",
+          img: "../writers/le-pere-goriot.jpg",
+          date: "1835",
         },
         {
-          name: "Les plongeurs",
-          img: "../painters/magritte/les-plongeurs.jpg",
-          date: "1943",
+          name: "Illusions perdues",
+          img: "../writers/illusions-perdues.jpg",
+          date: "1837",
         },
         {
-          name: "Les plongeurs bleu et noir",
-          img: "../painters/magritte/plongeurs-bleu-et-noir.jpg",
-          date: "1943",
+          name: "La Peau de chagrin",
+          img: "../writers/la-peau-de-chagrin.jpg",
+          date: "1831",
         },
         {
-          name: "Les loisirs sur fond rouge",
-          img: "../painters/magritte/Les-loisirs-sur-fond-rouge.webp",
-          date: "1949",
+          name: "Eugénie Grandet",
+          img: "../writers/eugenie-grandet.jpg",
+          date: "1833",
+        },
+      ],
+    },
+    {
+      artist: "Émile Zola",
+      lifePeriod: {
+        start: 1840,
+        end: 1902,
+      },
+      img: "../writers/zola.jpg",
+      description: "Auteur des Rougon-Macquart",
+      works: [
+        {
+          name: "Germinal",
+          img: "../writers/germinal.jpg",
+          date: "1885",
+        },
+        {
+          name: "Nana",
+          img: "../writers/nana.jpg",
+          date: "1880",
+        },
+        {
+          name: "L'assommoir",
+          img: "../writers/l-assommoir.jpg",
+          date: "1887",
+        },
+      ],
+    },
+    {
+      artist: "Gustave Flaubert",
+      lifePeriod: {
+        start: 1821,
+        end: 1980,
+      },
+      img: "../writers/flaubert.jpg",
+      description: "",
+      works: [
+        {
+          name: "Madame Bovary",
+          img: "../writers/madame-bovary.jpg",
+          date: "1856",
+        },
+        {
+          name: "L'Éducation sentimentale",
+          img: "../writers/l-education-sentimentale.jpg",
+          date: "1869",
+        },
+      ],
+    },
+    {
+      artist: "Guy de Maupassant",
+      lifePeriod: {
+        start: 1850,
+        end: 1893,
+      },
+      img: "../writers/Maupassant.jpg",
+      description: "",
+      works: [
+        {
+          name: "Bel ami",
+          img: "../writers/Bel-Ami.jpg",
+          date: "1885",
+        },
+        {
+          name: "Boule de suif",
+          img: "../writers/boule-de-suif.jpg",
+          date: "1880",
+        },
+      ],
+    },
+    {
+      artist: "Emily Brontë",
+      lifePeriod: {
+        start: 1818,
+        end: 1848,
+      },
+      img: "../writers/bronte.jpg",
+      description: "",
+      works: [
+        {
+          name: "Les Hauts de Hurlevent",
+          img: "../writers/leo-de-hurlevent.jpg",
+          date: "1847",
         },
       ],
     },

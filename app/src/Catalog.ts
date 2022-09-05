@@ -588,16 +588,6 @@ export class Catalog {
       ],
     },
     {
-      artist: "Banksy",
-      lifePeriod: {
-        start: 1974,
-        end: 0,
-      },
-      img: "../painters/banksy.jpg",
-      description: "",
-      works: [],
-    },
-    {
       artist: "Fernando Botero",
       lifePeriod: {
         start: 1932,
@@ -1217,7 +1207,7 @@ export class Catalog {
         start: 1780,
         end: 1867,
       },
-      img: "../painters/ingres.jpg",
+      img: "../painters/Ingres.jpg",
       description:
         "Peintre français, champion de la doctrine du beau et de la primauté du dessin sur la couleur, en opposition successive aux courants romantiques et réalistes",
       works: [

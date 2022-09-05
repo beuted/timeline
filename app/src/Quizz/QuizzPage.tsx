@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { ArtistQuizz, Quizz } from './Quizz';
 
 export const QuizzPage: React.FC<void> = () => {
-  let { category } = useParams();
+  let { category } = useParams<{ category: string }>();
   let artists: ArtistQuizz[] = [];
   switch (category) {
     case 'painters': artists = Catalog.painters; break;

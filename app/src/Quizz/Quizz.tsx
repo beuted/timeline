@@ -23,8 +23,6 @@ export const Quizz: React.FC<{ artists: ArtistQuizz[] }> = ({ artists }) => {
     const i = weightedRandom(artistsWeight);
 
     // update weight
-    console.log(artistsWeight);
-
     artistsWeight[i] = artistsWeight[i] * 1 / RandomCorrectionFactor;
     if (!artistsWeight.some(x => x > 1)) // try not to go too deep into division
       artistsWeight = artistsWeight.map(x => x * RandomCorrectionFactor)

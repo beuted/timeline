@@ -141,7 +141,6 @@ export default function Creations(props: Props) {
       date: '2021',
       description: ['Puzzle game', 'Built with Godot engine', 'A puzzle game about a grandma overcoming memory loss']
    },
-
    {
       title: 'koors',
       github: 'https://github.com/beuted/koors',

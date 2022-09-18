@@ -135,12 +135,20 @@ export default function Creations(props: Props) {
       description: ['My website', 're-done in react', 'using hooks and typescript']
    },
    {
+      title: 'Among the monlyths',
+      image: 'among-th-monolyths.png',
+      demo: 'https://dekajoo.itch.io/among-the-monolyths',
+      date: '2021',
+      description: ['Puzzle game', 'Built with Godot engine', 'A puzzle game about a grandma overcoming memory loss']
+   },
+
+   {
       title: 'koors',
       github: 'https://github.com/beuted/koors',
       image: 'koors.PNG',
       demo: 'https://koors.jehanno.net/',
       date: '2022',
-      description: ['Grocery list app', 'React typescript MUI and Nodejs for the backend', 'Let you share grocery list and recipices for easy access']
+      description: ['Grocery list app', 'Built with React typescript MUI and Nodejs', 'Let you share grocery list and recipices for easy access']
    },
    {
       title: 'chess analysis',
@@ -148,7 +156,7 @@ export default function Creations(props: Props) {
       image: 'chess.PNG',
       demo: 'http://chess.jehanno.net/',
       date: '2022',
-      description: ['Chess analysis app (chess.com and lichess)', 'React MUI and Stockfish.js running on the front-end to compute best moves', 'Let you check openings and finales where you need to improve and other stats']
+      description: ['Chess analysis app (chess.com and lichess)', 'Built with React MUI and Stockfish.js running on the front-end', 'Let you check openings and finales where you need to improve and other stats']
    },
   ].reverse();
 

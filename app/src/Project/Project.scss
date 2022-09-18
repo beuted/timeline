@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 
-.project-image:hover .project-title, .project-image:hover .project-date {
+.project-image:hover .project-title, .project-image:hover .project-date, .project-image:hover .project-github {
     opacity: 1;
 }
 
@@ -55,12 +55,22 @@
     filter: grayscale(0.25)
 }
 
-.project-title, .project-date {
+.project-title, .project-date, .project-github {
     opacity: 0;
     transition: opacity .5s ease-in-out;
-    font-size: 15pt;
-    color: #fff;
-    text-shadow: black 0px 0px 5px;
+    font-size: 23pt;
+    font-weight: bold;
+    color: white;
+    text-shadow: #000 0px 0px 5px;
+}
+
+.project-github {
+    z-index: 1000;
+    text-decoration: underline;
+}
+
+.project-github:hover {
+    color: #8dd3e2;
 }
 
 @media only screen and (max-width: 768px) {

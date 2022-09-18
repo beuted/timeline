@@ -150,8 +150,7 @@ export default function Creations(props: Props) {
       date: '2022',
       description: ['Chess analysis app (chess.com and lichess)', 'React MUI and Stockfish.js running on the front-end to compute best moves', 'Let you check openings and finales where you need to improve and other stats']
    },
-
-  ];
+  ].reverse();
 
   useEffect(() => {
    console.log("creations");

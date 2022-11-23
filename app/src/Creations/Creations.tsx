@@ -135,7 +135,7 @@ export default function Creations(props: Props) {
       description: ['My website', 're-done in react', 'using hooks and typescript']
    },
    {
-      title: 'Among the monlyths',
+      title: 'Among the monolyths',
       image: 'among-th-monolyths.png',
       demo: 'https://dekajoo.itch.io/among-the-monolyths',
       date: '2021',

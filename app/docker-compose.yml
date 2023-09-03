@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+
+  nginx:
+    container_name: nginx_benoit
+    image: nginx
+    restart: unless-stopped
+    networks:
+      - web
+    volumes:
+      - ./build:/etc/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.backend=nginx_benoit
+      - traefik.docker.network=web
+      # Port
+      - traefik.http.services.nginx_benoit.loadBalancer.server.port=80
+
+      # Rule
+      - traefik.http.routers.nginx_benoit.rule=Host(`benoit.jehanno.net`)
+      # SSL configuration
+      - traefik.http.routers.nginx_benoit.entryPoints=websecure
+      - traefik.http.routers.nginx_benoit.tls=true
+      - traefik.http.routers.nginx_benoit.tls.certResolver=myresolver
+
+networks:
+  web:
+    external: true

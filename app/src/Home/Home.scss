@@ -2,7 +2,7 @@
 
 .home {
   position: relative;
-  background-image: url("/../bg.gif")
+  background-image: url("/bg.gif")
 }
 
 .name {
@@ -23,7 +23,8 @@
   margin-left: -5px;
   padding: 0;
   list-style: none;
-  > li {
+
+  >li {
     @include smooth-underline(calc(15pt + 5px));
     display: inline-block;
     margin-bottom: 20px;
@@ -38,6 +39,7 @@
     z-index: 100;
   }
 }
+
 .pgp-key {
   z-index: 10000;
   font-size: calc(10px + 2vw);

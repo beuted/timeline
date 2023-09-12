@@ -5,6 +5,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #17181a;
+
+  overflow-y: scroll; // Always show the scrollbar to avoid flikering the screen on animation (cheap way to fix the issue)
 }
 
 a {
@@ -48,7 +50,7 @@ a {
   right: 0;
   position: fixed;
   width: 100%;
-  background-image: url("/../bg.gif");
+  background-image: url("/bg.gif");
   z-index: 1000;
   transition: top .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
@@ -95,7 +97,7 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .navigation.small>ul{
+  .navigation.small>ul {
     display: flex;
     flex-direction: column;
   }
@@ -143,15 +145,19 @@ a {
   transition: height .4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
   // Hide scrollbar
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* Internet Explorer 10+ */
   &::-webkit-scrollbar {
-    width: 0;  /* Safari and Chrome */
+    width: 0;
+    /* Safari and Chrome */
     height: 0;
   }
 }
 
-.switch-wrapper > div {
+.switch-wrapper>div {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -167,14 +173,14 @@ a {
   transform: scale(1.2);
 }
 
-.vertical-timeline-element-icon> img {
+.vertical-timeline-element-icon>img {
   border-radius: 50%;
   width: 60px;
   height: 60px;
 }
 
 @media (max-width: 1170px) {
-  .vertical-timeline-element-icon> img {
+  .vertical-timeline-element-icon>img {
     width: 40px;
     height: 40px;
   }
@@ -220,4 +226,41 @@ a {
     margin-right: auto;
     width: 33%;
   }
+}
+
+/**************************/
+/* CSS Animations Classes */
+/**************************/
+
+// From :https://codesandbox.io/s/animated-routes-demo-react-router-v6-6l1li?file=/src/index.tsx
+
+/*
+The following class-endings: *-enter, *-enter-active, *-exit, *-exit-active,
+have very specific meanings to <CSSTransition />
+(see more: https://reactcommunity.org/react-transition-group/css-transition)
+*/
+
+.fade-enter {
+  opacity: 0;
+  transform: translate(0, 25px);
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: opacity 250ms ease-out, transform 300ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translate(0, 30px);
+
+  transition: opacity 250ms ease-out, transform 300ms ease;
 }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Artist } from '../Catalog';
 import { TimelineElementDetails } from './TimelineElementDetails';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 let initialShowDetails: string | null = null;
 
-export const TimeLine: React.FC<{artists: Artist[]}> = ({ artists }) => {
+export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
   // Sort by birth
   const [showDetails, setShowDetails] = useState(initialShowDetails);
 
@@ -35,15 +35,15 @@ export const TimeLine: React.FC<{artists: Artist[]}> = ({ artists }) => {
           // This complicated crap is done to scroll at the right place depending of the "collapse" animation
           const scrollOffset = -20 - (areWeAboveTheCollapsedArtistIfAny ? timelineDetailSize : 0)
 
-          return (<div key={x.artist} style={{position: 'relative' }}>
-            <div ref={refToFocus} style={{position: 'absolute', top: scrollOffset+'px', left: 0}}></div>
+          return (<div key={x.artist} style={{ position: 'relative' }}>
+            <div ref={refToFocus} style={{ position: 'absolute', top: scrollOffset + 'px', left: 0 }}></div>
             <VerticalTimelineElement
               className="vertical-timeline-element"
               contentStyle={{ background: '#6eaab8', color: '#fff', boxShadow: 'none', marginBottom: '50px' }}
               contentArrowStyle={{ borderRight: '7px solid  #6eaab8' }}
               date={x.lifePeriod.start + " - " + (x.lifePeriod.end ? x.lifePeriod.end : "today")}
               icon={<img alt={x.artist} src={x.img}></img>}
-              iconStyle={{cursor: 'pointer'}}
+              iconStyle={{ cursor: 'pointer' }}
               iconOnClick={() => clickArtist(x.artist, refToFocus)}
               position={i % 2 === 0 ? 'right' : 'left'}
             >

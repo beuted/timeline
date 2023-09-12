@@ -1,5 +1,5 @@
 .creations {
-    background-image: url("/../bg.gif")
+    background-image: url("/bg.gif")
 }
 
 .projects {
@@ -44,7 +44,12 @@
     animation-delay: 0s;
 }
 
-@keyframes rightToLeft{
-	0% { transform: translateX(100vw); }
-	100% { transform: translateX(-350vw);  }
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-350vw);
+    }
 }

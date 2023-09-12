@@ -1,12 +1,15 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, ReactNode } from 'react';
 import './App.scss';
 import {
   Route,
+  Routes,
   Link,
-  BrowserRouter
+  BrowserRouter,
+  useLocation
 } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { Home } from './Home/Home';
-import { AnimatedSwitch } from 'react-router-transition';
+import { AnimatedRoutes } from 'react-router-transition';
 import ScrollToTop from './Router/ScrollToTop';
 import { useKeyPress } from './useKeyPress';
 import { useScrollPosition } from './useScrollPosition';
@@ -69,84 +72,74 @@ const App: React.FC = () => {
     setPrevPosition(scrollPosition);
   }, [scrollPosition, prevPosition, hideOnScroll])
 
+  const location = useLocation();
+
   return (
     <div className="App">
-      <div className={"hamburger-button" + (showMobileMenu ? ' active' : '')} onClick={() => {setShowMobileMenu(!showMobileMenu)}}>|||</div>
-      <BrowserRouter>
-        <div className={'navigation-wrapper small' + (hideOnScroll ? ' hidden' : '') + (showMobileMenu ? "" : " hidden-mobile")}>
-          <nav className={"navigation small"} >
-            <ul>
-              <NavItem exact to="/">Home</NavItem>
-              <NavItem exact to="/creations">Creations</NavItem>
-              {showPrivateMenus ? <NavItem exact to="/painters">Painters</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/photographers">Photographers</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/filmmakers">FilmMakers</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/maths">Maths</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/writers">Writers</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/socio-politique">Socio-Politique</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/history">History</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/economy">Economy</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/villes">Villes</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/departements">Départements</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/regions">Régions</NavItem> : null}
-              {showPrivateMenus ? <NavItem exact to="/fleuves">Fleuves</NavItem> : null}
-            </ul>
-          </nav>
-        </div>
+      <div className={"hamburger-button" + (showMobileMenu ? ' active' : '')} onClick={() => { setShowMobileMenu(!showMobileMenu) }}>|||</div>
+      <div className={'navigation-wrapper small' + (hideOnScroll ? ' hidden' : '') + (showMobileMenu ? "" : " hidden-mobile")}>
+        <nav className={"navigation small"} >
+          <ul>
+            <NavItem to="/">Home</NavItem>
+            <NavItem to="/creations">Creations</NavItem>
+            {showPrivateMenus ? <NavItem to="/painters">Painters</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/photographers">Photographers</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/filmmakers">FilmMakers</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/maths">Maths</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/writers">Writers</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/socio-politique">Socio-Politique</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/history">History</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/economy">Economy</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/villes">Villes</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/departements">Départements</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/regions">Régions</NavItem> : null}
+            {showPrivateMenus ? <NavItem to="/fleuves">Fleuves</NavItem> : null}
+          </ul>
+        </nav>
+      </div>
 
-        <div className={'scroll-indicator-wrapper ' + (scrollRatio < 0.03 ? 'hidden' : '')}>
-          <ScrollIndicator scrollRatio={scrollRatio}></ScrollIndicator>
-        </div>
+      <div className={'scroll-indicator-wrapper ' + (scrollRatio < 0.03 ? 'hidden' : '')}>
+        <ScrollIndicator scrollRatio={scrollRatio}></ScrollIndicator>
+      </div>
 
-        <ScrollToTop>
-          <AnimatedSwitch
-            atEnter={{ translateX: 100 }}
-            atLeave={{ translateX: -100 }}
-            atActive={{ translateX: 0 }}
-            mapStyles={(styles: any) => ({
-              transform: `translateX(${styles.translateX}%)`,
-              overflowY: styles.translateX !== 0 ? 'hidden' : 'initial'
-            })}
-            className="switch-wrapper"
-          >
-            <Route path="/creations" component={Creations} />
-            <Route path="/painters" component={Painters} />
-            <Route path="/photographers" component={Photographers} />
-            <Route path="/filmmakers" component={FilmMakers} />
-            <Route path="/quizz/:category" component={QuizzPage} />
-            <Route path="/maths" component={Maths} />
-            <Route path="/writers" component={Writers} />
-            <Route path="/socio-politique" component={SocioPolitique} />
-            <Route path="/economy" component={Economy} />
-            <Route path="/history" component={History} />
-            <Route path="/villes" component={Villes} />
-            <Route path="/regions" component={Regions} />
-            <Route path="/fleuves" component={Fleuves} />
-            <Route path="/departements" component={Departements} />
-            <Route path="/">
-              <Home setShowPrivateMenus={setShowPrivateMenus}></Home>
-            </Route>
-          </AnimatedSwitch>
-        </ScrollToTop>
-
-      </BrowserRouter>
+      <ScrollToTop>
+        <TransitionGroup component={null}>
+          <CSSTransition key={location.key} classNames="fade" timeout={300}>
+            <Routes>
+              <Route path="/creations" element={<Creations />} />
+              <Route path="/painters" element={<Painters />} />
+              <Route path="/photographers" element={<Photographers />} />
+              <Route path="/filmmakers" element={<FilmMakers />} />
+              <Route path="/quizz/:category" element={<QuizzPage />} />
+              <Route path="/maths" element={<Maths />} />
+              <Route path="/writers" element={<Writers />} />
+              <Route path="/socio-politique" element={<SocioPolitique />} />
+              <Route path="/economy" element={<Economy />} />
+              <Route path="/history" element={<History />} />
+              <Route path="/villes" element={<Villes />} />
+              <Route path="/regions" element={<Regions />} />
+              <Route path="/fleuves" element={<Fleuves />} />
+              <Route path="/departements" element={<Departements />} />
+              <Route path="/" element={<Home setShowPrivateMenus={setShowPrivateMenus}></Home>} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </ScrollToTop>
     </div>
   );
 }
 
-function NavItem({ children, to, exact }: { children: any, to: string, exact: boolean }) {
+function NavItem({ children, to }: { children: any, to: string }) {
   return (
-    <Route path={to} exact={exact} children={({ match }) => (
-      <li className={match ? "selected" : undefined}>
-        <Link to={to}
-        >{children}</Link>
-      </li>
-    )} />
+    <li className={false ? "selected" : undefined}>
+      <Link to={to}
+      >{children}</Link>
+    </li>
   )
 }
 
-export function waitLoaded<TProps>(WrappedComponent: React.ComponentType<TProps>): React.ComponentType<TProps> {
-  return (props: TProps) => (
+export function waitLoaded<TProps>(WrappedComponent: React.ComponentType<TProps>) {
+  return (props: TProps & { children?: ReactNode; }) => (
     <Suspense fallback={<span>Loading...</span>}>
       <WrappedComponent {...props} />
     </Suspense>

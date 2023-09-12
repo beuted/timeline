@@ -4,9 +4,10 @@ import 'react-vertical-timeline-component/style.min.css';
 import { useParams } from 'react-router-dom';
 import { ArtistQuizz, Quizz } from './Quizz';
 
-export const QuizzPage: React.FC<void> = () => {
+export const QuizzPage: React.FC<{}> = () => {
   let { category } = useParams<{ category: string }>();
   let artists: ArtistQuizz[] = [];
+
   switch (category) {
     case 'painters': artists = Catalog.painters; break;
     case 'photographers': artists = Catalog.photographers; break;

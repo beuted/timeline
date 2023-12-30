@@ -6,6 +6,9 @@ import 'react-vertical-timeline-component/style.min.css';
 
 let initialShowDetails: string | null = null;
 
+let VerticalTimelineAny = VerticalTimeline as any;
+let VerticalTimelineElementAny = VerticalTimelineElement as any; // Flemme de fixer ca mieux.
+
 export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
   // Sort by birth
   const [showDetails, setShowDetails] = useState(initialShowDetails);
@@ -26,7 +29,7 @@ export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
 
   return (
     <div>
-      <VerticalTimeline>
+      <VerticalTimelineAny>
         {artists.map((x, i) => {
           const refToFocus = React.createRef<HTMLDivElement>();
           const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -37,7 +40,7 @@ export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
 
           return (<div key={x.artist} style={{ position: 'relative' }}>
             <div ref={refToFocus} style={{ position: 'absolute', top: scrollOffset + 'px', left: 0 }}></div>
-            <VerticalTimelineElement
+            <VerticalTimelineElementAny
               className="vertical-timeline-element"
               contentStyle={{ background: '#6eaab8', color: '#fff', boxShadow: 'none', marginBottom: '50px' }}
               contentArrowStyle={{ borderRight: '7px solid  #6eaab8' }}
@@ -51,12 +54,12 @@ export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
               <p>
                 {x.description}
               </p>
-            </VerticalTimelineElement>
+            </VerticalTimelineElementAny>
             <TimelineElementDetails show={showDetails === x.artist} artist={x}></TimelineElementDetails>
           </div>)
         })}
 
-      </VerticalTimeline>
+      </VerticalTimelineAny>
     </div>
   );
 }

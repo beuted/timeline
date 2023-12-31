@@ -178,12 +178,7 @@ export class Catalog {
           name: "Le Joueur de fifre",
           img: "../painters/manet/The_Fifer.jpg",
           date: "1866",
-        },
-        {
-          name: "La pie",
-          img: "../painters/manet/La_pie.jpg",
-          date: "1868",
-        },
+        }
       ],
     },
     {
@@ -220,6 +215,17 @@ export class Catalog {
           img: "../painters/monet/les-coquelicots.jpg",
           date: "1873",
         },
+        {
+          name: "La pie",
+          img: "../painters/monet/La_pie.jpg",
+          date: "1868",
+        },
+        {
+          name: "La Rue Montorgueil",
+          img: "../painters/monet/montorgueil.jpg",
+          date: "1878",
+        },
+
       ],
     },
     {
@@ -634,6 +640,11 @@ export class Catalog {
           img: "../painters/seurat/grey-weather-grande-jatte.jpg",
           date: "1886",
         },
+        {
+          name: "Le Cirque",
+          img: "../painters/seurat/cirque.jpg",
+          date: "1890",
+        },
       ],
     },
     {
@@ -693,6 +704,23 @@ export class Catalog {
         },
       ],
     },
+    {
+      artist: "Gustave Caillebotte",
+      lifePeriod: {
+        start: 1848,
+        end: 1894,
+      },
+      img: "../painters/caillebotte.jpg",
+      description: "Peintre français, collectionneur, mécène et organisateur des expositions impressionnistes de 1877, 1879, 1880 et 1882.",
+      works: [
+        {
+          name: "Les Raboteurs de parquet",
+          img: "../painters/caillebotte/les-raboteurs-de-parquet.jpg",
+          date: "1875",
+        },
+      ],
+    },
+
     {
       artist: "Le Douanier Rousseau",
       lifePeriod: {
@@ -973,6 +1001,11 @@ export class Catalog {
           name: "Parmis les fleurs",
           img: "../painters/redon/parmis-les-fleurs.jpg",
           date: "1905",
+        },
+        {
+          name: "Arbres sur fond jaune",
+          img: "../painters/redon/arbre_sur_fond_jaune.jpg",
+          date: "1901",
         },
       ],
     },

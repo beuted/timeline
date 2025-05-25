@@ -1300,6 +1300,43 @@ export class Catalog {
         }
       ],
     },
+    {
+      artist: "David Hockney",
+      lifePeriod: {
+        start: 1963,
+        end: null,
+      },
+      img: "../painters/David_Hockney.jpg",
+      description:
+        "Peintre portraitiste et paysagiste, dessinateur, graveur, décorateur, photographe et théoricien de l'art britannique. Il vit et travaille de 2019 à 2023 dans le pays d'Auge, en Normandie, avant de retourner vivre à Londres.",
+      works: [
+        {
+          name: "Quince tree (Cognacier)",
+          img: "../painters/hockney/quince_tree.jpg",
+          date: "2019",
+        },
+        {
+          name: "More Felled Trees on Woldgate",
+          img: "../painters/hockney/felled_tree_on_woldgate.jpg",
+          date: "2008",
+        },
+        {
+          name: "A Bigger Splash",
+          img: "../painters/hockney/A-Bigger-Splash.webp",
+          date: "1967",
+        },
+        {
+          name: "Nichols Canyon",
+          img: "../painters/hockney/Nichols-Canyon.jpg",
+          date: "1980",
+        },
+        {
+          name: "Early July Tunnel",
+          img: "../painters/hockney/early-july-tunnel.jpg",
+          date: "2006",
+        }
+      ],
+    },
   ];
 
   public static photographers: Artist[] = [
@@ -1952,6 +1989,48 @@ export class Catalog {
           img: "../filmmakers/pt-anderson/the-master.jpg",
           date: "2012",
         },
+      ],
+    },
+    {
+      artist: "Ari Aster",
+      lifePeriod: {
+        start: 1986,
+        end: null,
+      },
+      img: "../filmmakers/Ari_Aster.jpg",
+      description: "",
+      works: [
+        {
+          name: "Hérédité",
+          img: "../filmmakers/ari-aster/heredite.jpg",
+          date: "2018",
+        },
+        {
+          name: "Midsommar",
+          img: "../filmmakers/ari-aster/midsommar.jpg",
+          date: "2019",
+        }
+      ],
+    },
+    {
+      artist: "Sean Baker",
+      lifePeriod: {
+        start: 1971,
+        end: null,
+      },
+      img: "../filmmakers/Sean_Baker.jpg",
+      description: "",
+      works: [
+        {
+          name: "The Florida Project",
+          img: "../filmmakers/sean-baker/The_Florida_Project.jpg",
+          date: "2017",
+        },
+        {
+          name: "Anora",
+          img: "../filmmakers/sean-baker/Anora.jpg",
+          date: "2024",
+        }
       ],
     },
   ];

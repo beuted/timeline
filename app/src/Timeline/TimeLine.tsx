@@ -11,7 +11,7 @@ let VerticalTimelineElementAny = VerticalTimelineElement as any; // Flemme de fi
 
 export const TimeLine: React.FC<{ artists: Artist[] }> = ({ artists }) => {
   // Sort by birth
-  const [showDetails, setShowDetails] = useState(initialShowDetails);
+  const [showDetails, setShowDetails] = useState<string | null>(initialShowDetails);
 
   function clickArtist(artistName: string, refToFocus: React.RefObject<HTMLDivElement>) {
     if (showDetails === artistName) {

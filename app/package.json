@@ -36,7 +36,6 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/react-transition-group": "^4.4.6",
     "@types/react-vertical-timeline-component": "^2.6.0",
-    "gh-pages": "^2.2.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

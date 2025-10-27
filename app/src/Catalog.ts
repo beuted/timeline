@@ -1337,6 +1337,33 @@ export class Catalog {
         }
       ],
     },
+    {
+      artist: "Jacques-Louis David",
+      lifePeriod: {
+        start: 1748,
+        end: 1825,
+      },
+      img: "../painters/David_Hockney.jpg",
+      description:
+        "Peintre et conventionnel français né le 30 août 1748 à Paris et mort le 29 décembre 1825 à Bruxelles. Il est considéré comme le chef de file du mouvement néo-classique, dont il représente le style pictural. Il opère une rupture avec le style galant et libertin de la peinture rococo du XVIIIe siècle. Il a traversé la revolution française, dont il a été un acteur engagé puis se met au service de Napoléon.",
+      works: [
+        {
+          name: "La mort de Marat",
+          img: "../painters/david/La_Mort_De_Marat.jpg",
+          date: "1793",
+        },
+        {
+          name: "Bonaparte franchissant le Grand-Saint-Bernard",
+          img: "../painters/david/Bonaparte_franchissant_le_Grand-Saint-Bernard.jpg",
+          date: "1801",
+        },
+        {
+          name: "Le Serment des Horaces",
+          img: "../painters/david/Le_Serment_des_Horaces.jpg",
+          date: "1784",
+        }
+      ],
+    },
   ];
 
   public static photographers: Artist[] = [

@@ -1343,7 +1343,7 @@ export class Catalog {
         start: 1748,
         end: 1825,
       },
-      img: "../painters/David_Hockney.jpg",
+      img: "../painters/david.jpg",
       description:
         "Peintre et conventionnel français né le 30 août 1748 à Paris et mort le 29 décembre 1825 à Bruxelles. Il est considéré comme le chef de file du mouvement néo-classique, dont il représente le style pictural. Il opère une rupture avec le style galant et libertin de la peinture rococo du XVIIIe siècle. Il a traversé la revolution française, dont il a été un acteur engagé puis se met au service de Napoléon.",
       works: [
